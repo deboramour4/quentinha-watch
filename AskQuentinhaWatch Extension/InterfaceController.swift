@@ -12,6 +12,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var backgroundGroup: WKInterfaceGroup!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -26,6 +28,13 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    override func didAppear() {
+        backgroundGroup.setBackgroundImageNamed("Progress")
+        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 99),
+                                                 duration: 600,
+                                                 repeatCount: 1)
     }
 
 }

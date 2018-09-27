@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hYm-E6-s3d">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,20 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AskQuentinhaWatch" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AskQuentinhaWatch" customModuleProvider="target">
+                    <items>
+                        <group width="100" height="100" alignment="center" verticalAlignment="center" backgroundImage="Progress0" id="725-lv-CZg"/>
+                        <label alignment="center" verticalAlignment="bottom" text="Faça seu pedido" id="B2c-Nr-wbA"/>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="Pedir" id="mKQ-bu-o4P">
+                            <connections>
+                                <segue destination="hYm-E6-s3d" kind="modal" id="BM2-SF-Gaz"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="backgroundGroup" destination="725-lv-CZg" id="MO4-nD-xOB"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
