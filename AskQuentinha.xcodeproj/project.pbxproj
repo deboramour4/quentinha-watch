@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF69F215D112D00003770 /* AppDelegate.swift */; };
+		BEDDF6A2215D112D00003770 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6A1215D112D00003770 /* ViewController.swift */; };
+		BEDDF6A5215D112D00003770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6A3215D112D00003770 /* Main.storyboard */; };
+		BEDDF6A7215D112E00003770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6A6215D112E00003770 /* Assets.xcassets */; };
+		BEDDF6AA215D112E00003770 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6A8215D112E00003770 /* LaunchScreen.storyboard */; };
+		BEDDF6B7215D113E00003770 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6B5215D113E00003770 /* Interface.storyboard */; };
+		BEDDF6B9215D113F00003770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6B8215D113F00003770 /* Assets.xcassets */; };
+		BEDDF6C0215D113F00003770 /* AskQuentinhaWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BEDDF6BF215D113F00003770 /* AskQuentinhaWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BEDDF6C5215D113F00003770 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6C4215D113F00003770 /* InterfaceController.swift */; };
+		BEDDF6C7215D113F00003770 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6C6215D113F00003770 /* ExtensionDelegate.swift */; };
+		BEDDF6C9215D113F00003770 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6C8215D113F00003770 /* NotificationController.swift */; };
+		BEDDF6CB215D113F00003770 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6CA215D113F00003770 /* ComplicationController.swift */; };
+		BEDDF6CD215D113F00003770 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6CC215D113F00003770 /* Assets.xcassets */; };
+		BEDDF6D2215D113F00003770 /* AskQuentinhaWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BEDDF6B3215D113E00003770 /* AskQuentinhaWatch.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEDDF6C1215D113F00003770 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEDDF694215D112D00003770 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEDDF6BE215D113F00003770;
+			remoteInfo = "AskQuentinhaWatch Extension";
+		};
+		BEDDF6D0215D113F00003770 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEDDF694215D112D00003770 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEDDF6B2215D113E00003770;
+			remoteInfo = AskQuentinhaWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BEDDF6D6215D113F00003770 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BEDDF6C0215D113F00003770 /* AskQuentinhaWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDDF6DA215D113F00003770 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				BEDDF6D2215D113F00003770 /* AskQuentinhaWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BEDDF69C215D112D00003770 /* AskQuentinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskQuentinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDDF69F215D112D00003770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BEDDF6A1215D112D00003770 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEDDF6A4215D112D00003770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BEDDF6A6215D112E00003770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEDDF6A9215D112E00003770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BEDDF6AB215D112E00003770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEDDF6B3215D113E00003770 /* AskQuentinhaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskQuentinhaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDDF6B6215D113E00003770 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		BEDDF6B8215D113F00003770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEDDF6BA215D113F00003770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEDDF6BF215D113F00003770 /* AskQuentinhaWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AskQuentinhaWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEDDF6C4215D113F00003770 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		BEDDF6C6215D113F00003770 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		BEDDF6C8215D113F00003770 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		BEDDF6CA215D113F00003770 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		BEDDF6CC215D113F00003770 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BEDDF6CE215D113F00003770 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEDDF6CF215D113F00003770 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BEDDF699215D112D00003770 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDDF6BC215D113F00003770 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BEDDF693215D112D00003770 = {
+			isa = PBXGroup;
+			children = (
+				BEDDF69E215D112D00003770 /* AskQuentinha */,
+				BEDDF6B4215D113E00003770 /* AskQuentinhaWatch */,
+				BEDDF6C3215D113F00003770 /* AskQuentinhaWatch Extension */,
+				BEDDF69D215D112D00003770 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BEDDF69D215D112D00003770 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF69C215D112D00003770 /* AskQuentinha.app */,
+				BEDDF6B3215D113E00003770 /* AskQuentinhaWatch.app */,
+				BEDDF6BF215D113F00003770 /* AskQuentinhaWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BEDDF69E215D112D00003770 /* AskQuentinha */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF69F215D112D00003770 /* AppDelegate.swift */,
+				BEDDF6A1215D112D00003770 /* ViewController.swift */,
+				BEDDF6A3215D112D00003770 /* Main.storyboard */,
+				BEDDF6A6215D112E00003770 /* Assets.xcassets */,
+				BEDDF6A8215D112E00003770 /* LaunchScreen.storyboard */,
+				BEDDF6AB215D112E00003770 /* Info.plist */,
+			);
+			path = AskQuentinha;
+			sourceTree = "<group>";
+		};
+		BEDDF6B4215D113E00003770 /* AskQuentinhaWatch */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6B5215D113E00003770 /* Interface.storyboard */,
+				BEDDF6B8215D113F00003770 /* Assets.xcassets */,
+				BEDDF6BA215D113F00003770 /* Info.plist */,
+			);
+			path = AskQuentinhaWatch;
+			sourceTree = "<group>";
+		};
+		BEDDF6C3215D113F00003770 /* AskQuentinhaWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BEDDF6C4215D113F00003770 /* InterfaceController.swift */,
+				BEDDF6C6215D113F00003770 /* ExtensionDelegate.swift */,
+				BEDDF6C8215D113F00003770 /* NotificationController.swift */,
+				BEDDF6CA215D113F00003770 /* ComplicationController.swift */,
+				BEDDF6CC215D113F00003770 /* Assets.xcassets */,
+				BEDDF6CE215D113F00003770 /* Info.plist */,
+				BEDDF6CF215D113F00003770 /* PushNotificationPayload.apns */,
+			);
+			path = "AskQuentinhaWatch Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BEDDF69B215D112D00003770 /* AskQuentinha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEDDF6AE215D112E00003770 /* Build configuration list for PBXNativeTarget "AskQuentinha" */;
+			buildPhases = (
+				BEDDF698215D112D00003770 /* Sources */,
+				BEDDF699215D112D00003770 /* Frameworks */,
+				BEDDF69A215D112D00003770 /* Resources */,
+				BEDDF6DA215D113F00003770 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEDDF6D1215D113F00003770 /* PBXTargetDependency */,
+			);
+			name = AskQuentinha;
+			productName = AskQuentinha;
+			productReference = BEDDF69C215D112D00003770 /* AskQuentinha.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEDDF6B2215D113E00003770 /* AskQuentinhaWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEDDF6D7215D113F00003770 /* Build configuration list for PBXNativeTarget "AskQuentinhaWatch" */;
+			buildPhases = (
+				BEDDF6B1215D113E00003770 /* Resources */,
+				BEDDF6D6215D113F00003770 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEDDF6C2215D113F00003770 /* PBXTargetDependency */,
+			);
+			name = AskQuentinhaWatch;
+			productName = AskQuentinhaWatch;
+			productReference = BEDDF6B3215D113E00003770 /* AskQuentinhaWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		BEDDF6BE215D113F00003770 /* AskQuentinhaWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEDDF6D3215D113F00003770 /* Build configuration list for PBXNativeTarget "AskQuentinhaWatch Extension" */;
+			buildPhases = (
+				BEDDF6BB215D113F00003770 /* Sources */,
+				BEDDF6BC215D113F00003770 /* Frameworks */,
+				BEDDF6BD215D113F00003770 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AskQuentinhaWatch Extension";
+			productName = "AskQuentinhaWatch Extension";
+			productReference = BEDDF6BF215D113F00003770 /* AskQuentinhaWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BEDDF694215D112D00003770 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Academy;
+				TargetAttributes = {
+					BEDDF69B215D112D00003770 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					BEDDF6B2215D113E00003770 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					BEDDF6BE215D113F00003770 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = BEDDF697215D112D00003770 /* Build configuration list for PBXProject "AskQuentinha" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BEDDF693215D112D00003770;
+			productRefGroup = BEDDF69D215D112D00003770 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BEDDF69B215D112D00003770 /* AskQuentinha */,
+				BEDDF6B2215D113E00003770 /* AskQuentinhaWatch */,
+				BEDDF6BE215D113F00003770 /* AskQuentinhaWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BEDDF69A215D112D00003770 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDDF6AA215D112E00003770 /* LaunchScreen.storyboard in Resources */,
+				BEDDF6A7215D112E00003770 /* Assets.xcassets in Resources */,
+				BEDDF6A5215D112D00003770 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDDF6B1215D113E00003770 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDDF6B9215D113F00003770 /* Assets.xcassets in Resources */,
+				BEDDF6B7215D113E00003770 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDDF6BD215D113F00003770 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDDF6CD215D113F00003770 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BEDDF698215D112D00003770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDDF6A2215D112D00003770 /* ViewController.swift in Sources */,
+				BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEDDF6BB215D113F00003770 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEDDF6C9215D113F00003770 /* NotificationController.swift in Sources */,
+				BEDDF6CB215D113F00003770 /* ComplicationController.swift in Sources */,
+				BEDDF6C7215D113F00003770 /* ExtensionDelegate.swift in Sources */,
+				BEDDF6C5215D113F00003770 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEDDF6C2215D113F00003770 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEDDF6BE215D113F00003770 /* AskQuentinhaWatch Extension */;
+			targetProxy = BEDDF6C1215D113F00003770 /* PBXContainerItemProxy */;
+		};
+		BEDDF6D1215D113F00003770 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEDDF6B2215D113E00003770 /* AskQuentinhaWatch */;
+			targetProxy = BEDDF6D0215D113F00003770 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BEDDF6A3215D112D00003770 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEDDF6A4215D112D00003770 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BEDDF6A8215D112E00003770 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEDDF6A9215D112E00003770 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BEDDF6B5215D113E00003770 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BEDDF6B6215D113E00003770 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BEDDF6AC215D112E00003770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BEDDF6AD215D112E00003770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BEDDF6AF215D112E00003770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
+				INFOPLIST_FILE = AskQuentinha/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEDDF6B0215D112E00003770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
+				INFOPLIST_FILE = AskQuentinha/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEDDF6D4215D113F00003770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
+				INFOPLIST_FILE = "AskQuentinhaWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		BEDDF6D5215D113F00003770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
+				INFOPLIST_FILE = "AskQuentinhaWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		BEDDF6D8215D113F00003770 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
+				IBSC_MODULE = AskQuentinhaWatch_Extension;
+				INFOPLIST_FILE = AskQuentinhaWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		BEDDF6D9215D113F00003770 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
+				IBSC_MODULE = AskQuentinhaWatch_Extension;
+				INFOPLIST_FILE = AskQuentinhaWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BEDDF697215D112D00003770 /* Build configuration list for PBXProject "AskQuentinha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDDF6AC215D112E00003770 /* Debug */,
+				BEDDF6AD215D112E00003770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEDDF6AE215D112E00003770 /* Build configuration list for PBXNativeTarget "AskQuentinha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDDF6AF215D112E00003770 /* Debug */,
+				BEDDF6B0215D112E00003770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEDDF6D3215D113F00003770 /* Build configuration list for PBXNativeTarget "AskQuentinhaWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDDF6D4215D113F00003770 /* Debug */,
+				BEDDF6D5215D113F00003770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEDDF6D7215D113F00003770 /* Build configuration list for PBXNativeTarget "AskQuentinhaWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEDDF6D8215D113F00003770 /* Debug */,
+				BEDDF6D9215D113F00003770 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BEDDF694215D112D00003770 /* Project object */;
+}
