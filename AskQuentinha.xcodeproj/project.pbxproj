@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2E2E999215D1414001926C3 /* OrderingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E2E998215D1414001926C3 /* OrderingModel.swift */; };
+		A2E2E99B215D14C2001926C3 /* FakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E2E99A215D14C2001926C3 /* FakeData.json */; };
 		BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF69F215D112D00003770 /* AppDelegate.swift */; };
 		BEDDF6A2215D112D00003770 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6A1215D112D00003770 /* ViewController.swift */; };
 		BEDDF6A5215D112D00003770 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEDDF6A3215D112D00003770 /* Main.storyboard */; };
@@ -66,6 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A2E2E998215D1414001926C3 /* OrderingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingModel.swift; sourceTree = "<group>"; };
+		A2E2E99A215D14C2001926C3 /* FakeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeData.json; sourceTree = "<group>"; };
 		BEDDF69C215D112D00003770 /* AskQuentinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskQuentinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEDDF69F215D112D00003770 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEDDF6A1215D112D00003770 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				BEDDF6A6215D112E00003770 /* Assets.xcassets */,
 				BEDDF6A8215D112E00003770 /* LaunchScreen.storyboard */,
 				BEDDF6AB215D112E00003770 /* Info.plist */,
+				A2E2E998215D1414001926C3 /* OrderingModel.swift */,
+				A2E2E99A215D14C2001926C3 /* FakeData.json */,
 			);
 			path = AskQuentinha;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 			files = (
 				BEDDF6AA215D112E00003770 /* LaunchScreen.storyboard in Resources */,
 				BEDDF6A7215D112E00003770 /* Assets.xcassets in Resources */,
+				A2E2E99B215D14C2001926C3 /* FakeData.json in Resources */,
 				BEDDF6A5215D112D00003770 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E2E999215D1414001926C3 /* OrderingModel.swift in Sources */,
 				BEDDF6A2215D112D00003770 /* ViewController.swift in Sources */,
 				BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */,
 			);
@@ -471,8 +479,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AskQuentinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -480,6 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -489,8 +499,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AskQuentinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,6 +509,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
