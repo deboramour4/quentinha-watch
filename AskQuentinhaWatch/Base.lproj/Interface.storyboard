@@ -19,7 +19,7 @@
         <!--Escolher prato-->
         <scene sceneID="49a-VV-gvQ">
             <objects>
-                <controller identifier="Meal" title="Escolher prato" id="hYm-E6-s3d">
+                <controller identifier="Meal" title="Escolher prato" id="hYm-E6-s3d" customClass="MealInterfaceController" customModule="AskQuentinhaWatch_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" spacing="16" id="CSl-Hr-OMq">
                             <items>
@@ -28,7 +28,7 @@
                                         <label alignment="left" text="Guarnição" id="XdL-lD-yfV"/>
                                         <table alignment="left" id="zns-0w-8DM">
                                             <items>
-                                                <tableRow id="9ha-kZ-YNG">
+                                                <tableRow identifier="GarnishRow" id="9ha-kZ-YNG">
                                                     <group key="rootItem" width="1" alignment="left" spacing="8" id="FbU-kw-R4c">
                                                         <items>
                                                             <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="pT5-kN-TOn">
@@ -47,7 +47,7 @@
                                         <label alignment="left" text="Principal" id="meZ-M6-0cL"/>
                                         <table alignment="left" id="1EO-bn-drh">
                                             <items>
-                                                <tableRow id="zuw-k5-LWJ">
+                                                <tableRow identifier="MainMealRow" id="zuw-k5-LWJ">
                                                     <group key="rootItem" width="1" alignment="left" spacing="8" id="ALp-cU-coG">
                                                         <items>
                                                             <separator alignment="left" id="YxC-jR-2xz">
@@ -65,6 +65,8 @@
                         </group>
                     </items>
                     <connections>
+                        <outlet property="garnishTable" destination="zns-0w-8DM" id="oSG-yH-KPx"/>
+                        <outlet property="mainMealTable" destination="1EO-bn-drh" id="wSH-WV-JDT"/>
                         <segue destination="BEB-Nz-B6H" kind="relationship" relationship="nextPage" id="J8w-IW-8dO"/>
                     </connections>
                 </controller>
