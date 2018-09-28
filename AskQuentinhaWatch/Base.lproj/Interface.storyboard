@@ -15,7 +15,9 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AskQuentinhaWatch" customModuleProvider="target">
                     <items>
                         <group width="100" height="100" alignment="center" verticalAlignment="center" backgroundImage="Progress0" id="725-lv-CZg"/>
-                        <label alignment="center" verticalAlignment="bottom" text="Faça seu pedido" id="B2c-Nr-wbA"/>
+                        <label alignment="center" verticalAlignment="bottom" text="Faça seu pedido" id="B2c-Nr-wbA">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </label>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="Pedir" id="mKQ-bu-o4P">
                             <connections>
                                 <segue destination="hYm-E6-s3d" kind="modal" id="BM2-SF-Gaz"/>
@@ -29,27 +31,32 @@
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--Escolher prato-->
+        <!--Meal-->
         <scene sceneID="49a-VV-gvQ">
             <objects>
-                <controller identifier="Meal" title="Escolher prato" id="hYm-E6-s3d" customClass="MealInterfaceController" customModule="AskQuentinhaWatch_Extension">
+                <controller identifier="Meal" id="hYm-E6-s3d" customClass="MealInterfaceController" customModule="AskQuentinhaWatch_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" spacing="16" id="CSl-Hr-OMq">
                             <items>
                                 <group width="1" alignment="left" layout="vertical" spacing="4" id="uYa-qF-aMP">
                                     <items>
-                                        <label alignment="left" text="Guarnição" id="XdL-lD-yfV"/>
+                                        <label alignment="left" text="Guarnição" id="XdL-lD-yfV">
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
                                         <table alignment="left" id="zns-0w-8DM">
                                             <items>
-                                                <tableRow identifier="GarnishRow" id="9ha-kZ-YNG">
+                                                <tableRow identifier="GarnishRow" id="9ha-kZ-YNG" customClass="MealRowController" customModule="AskQuentinhaWatch_Extension">
                                                     <group key="rootItem" width="1" alignment="left" spacing="8" id="FbU-kw-R4c">
                                                         <items>
                                                             <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="pT5-kN-TOn">
-                                                                <color key="color" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="color" red="1" green="0.089805245425000013" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </separator>
                                                             <label height="1" alignment="left" text="Arroz" id="OFf-cs-F21"/>
                                                         </items>
                                                     </group>
+                                                    <connections>
+                                                        <outlet property="garnishLabel" destination="OFf-cs-F21" id="yMY-Ew-Ghu"/>
+                                                    </connections>
                                                 </tableRow>
                                             </items>
                                         </table>
@@ -57,18 +64,23 @@
                                 </group>
                                 <group width="1" alignment="left" layout="vertical" spacing="4" id="5vG-Fo-Mdu">
                                     <items>
-                                        <label alignment="left" text="Principal" id="meZ-M6-0cL"/>
+                                        <label alignment="left" text="Principal" id="meZ-M6-0cL">
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
                                         <table alignment="left" id="1EO-bn-drh">
                                             <items>
-                                                <tableRow identifier="MainMealRow" id="zuw-k5-LWJ">
+                                                <tableRow identifier="MainMealRow" id="zuw-k5-LWJ" customClass="MealRowController" customModule="AskQuentinhaWatch_Extension">
                                                     <group key="rootItem" width="1" alignment="left" spacing="8" id="ALp-cU-coG">
                                                         <items>
                                                             <separator alignment="left" id="YxC-jR-2xz">
-                                                                <color key="color" red="1" green="0.81287977430000002" blue="0.47966057870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="color" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </separator>
                                                             <label height="1" alignment="left" text="Carne" id="mpJ-U0-0qg"/>
                                                         </items>
                                                     </group>
+                                                    <connections>
+                                                        <outlet property="mainMealLabel" destination="mpJ-U0-0qg" id="M4N-xZ-OFc"/>
+                                                    </connections>
                                                 </tableRow>
                                             </items>
                                         </table>

@@ -33,7 +33,7 @@ class InterfaceController: WKInterfaceController {
     override func didAppear() {
         backgroundGroup.setBackgroundImageNamed("Progress")
         backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 99),
-                                                 duration: 600,
+                                                 duration: 60,
                                                  repeatCount: 1)
     }
 

@@ -25,15 +25,23 @@ class MealInterfaceController: WKInterfaceController {
         garnishTable.setNumberOfRows(garnishs.count, withRowType: "GarnishRow")
         mainMealTable.setNumberOfRows(mainMeals.count, withRowType: "MainMealRow")
 
+        //Complete table rows data
+        for index in 0..<garnishTable.numberOfRows {
+            guard let controller = garnishTable.rowController(at: index) as? MealRowController else { continue }
+            controller.garnish = garnishs[index]
+        }
+
+        for index in 0..<mainMealTable.numberOfRows {
+            guard let controller = mainMealTable.rowController(at: index) as? MealRowController else { continue }
+            controller.mainMeal = mainMeals[index]
+        }
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
 
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
 
