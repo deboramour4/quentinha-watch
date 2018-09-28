@@ -16,13 +16,24 @@ class OrderingModel: NSObject {
 	/// Make an order.
 	func makeOrder() {
 		self.createLocalNotification(
-			title: "Iniciado o Preparo",
-			body: "Daqui a 2 mins",
-			category: "firstNotification",
+			title: "Pedido confirmado",
+			body: "Iniciaremos logo o preparo",
+			category: "InitialNotification",
 			trigger: UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false))
+		
+		self.createLocalNotification(
+			title: "Iniciado o preparo do pedido",
+			body: "Previsão de pronto daqui a 2 mins",
+			category: "FirstNotification",
+			trigger: UNTimeIntervalNotificationTrigger(timeInterval: 6, repeats: false))
+		
+		self.createLocalNotification(
+			title: "Saiu para entrega",
+			body: "Previsão de pronto daqui a 1 min",
+			category: "SecondNotification",
+			trigger: UNTimeIntervalNotificationTrigger(timeInterval: 9, repeats: false))
 	}
-	
-	
+		
 	/// Creates a local notification.
 	///
 	/// - Parameters:

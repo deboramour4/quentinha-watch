@@ -134,11 +134,11 @@
 			children = (
 				BEDDF69F215D112D00003770 /* AppDelegate.swift */,
 				BEDDF6A1215D112D00003770 /* ViewController.swift */,
+				A2E2E998215D1414001926C3 /* OrderingModel.swift */,
 				BEDDF6A3215D112D00003770 /* Main.storyboard */,
 				BEDDF6A6215D112E00003770 /* Assets.xcassets */,
 				BEDDF6A8215D112E00003770 /* LaunchScreen.storyboard */,
 				BEDDF6AB215D112E00003770 /* Info.plist */,
-				A2E2E998215D1414001926C3 /* OrderingModel.swift */,
 				A2E2E99A215D14C2001926C3 /* FakeData.json */,
 			);
 			path = AskQuentinha;

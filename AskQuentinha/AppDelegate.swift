@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
-		UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-			print("granted permission: \(granted)")
+		// Configuração para pedir autorização para notificações.
+		let center = UNUserNotificationCenter.current()
+		let options: UNAuthorizationOptions = [.alert, .sound]
+		center.requestAuthorization(options: options) { (granted, error) in
+			print("granted: \(granted)")
 		}
+		center.delegate = self
 		
         return true
     }
