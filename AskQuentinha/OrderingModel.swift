@@ -9,42 +9,42 @@
 import UIKit
 import UserNotifications
 
-enum OrderStatus {
-	case confirmed
-	case preparing
-	case outForDelivery
-	case ready
+protocol OrderingModelDelegate {
+	func send(message: [String: Any])
 }
 
 class OrderingModel: NSObject {
 	
-	private var notificationCenter = UNUserNotificationCenter.current()
+	var delegate: OrderingModelDelegate?
 	
-	/// Make an order.
-	func makeOrder() {
-		self.createLocalNotification(
-			title: "Pedido confirmado pelo restaurante",
-			body: "Iniciaremos logo o preparo",
-			category: "InitialNotification",
-			trigger: UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false))
+	private var notificationCenter = UNUserNotificationCenter.current()
+	private (set) var currentStatus = OrderStatus.noOrder
+	
+	private var timer: DispatchSourceTimer?
+	
+	func makeOrderWithTimer() {
+		let queue = DispatchQueue(label: "OrderTimer")
 		
-		self.createLocalNotification(
-			title: "Iniciado o preparo do pedido",
-			body: "Previsão de pronto daqui a 2 mins",
-			category: "FirstNotification",
-			trigger: UNTimeIntervalNotificationTrigger(timeInterval: 6, repeats: false))
-		
-		self.createLocalNotification(
-			title: "Saiu para entrega",
-			body: "Previsão de chegada daqui a 1 min",
-			category: "SecondNotification",
-			trigger: UNTimeIntervalNotificationTrigger(timeInterval: 9, repeats: false))
-		
-		self.createLocalNotification(
-			title: "Tamo aqui",
-			body: "Pode vir buscar aqui na entrada",
-			category: "ArrivedNotification",
-			trigger: UNTimeIntervalNotificationTrigger(timeInterval: 12, repeats: false))
+		self.timer?.cancel()
+		self.timer = DispatchSource.makeTimerSource(queue: queue)
+		self.timer?.schedule(deadline: .now(), repeating: .seconds(2), leeway: .seconds(1))
+		self.timer?.setEventHandler(handler: {
+			print("Passar status")
+			
+			self.currentStatus = self.currentStatus.next
+			let statusInfo = self.currentStatus.info
+			self.createLocalNotification(
+				title: statusInfo.title,
+				body: statusInfo.body,
+				category: statusInfo.category,
+				trigger: UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false))
+		})
+		self.timer?.resume()
+	}
+	
+	private func stopTimer() {
+		self.timer?.cancel()
+		self.timer = nil
 	}
 	
 	/// Creates a local notification.
