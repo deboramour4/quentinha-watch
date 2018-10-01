@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CCC4AAA21625AB7004BC6CA /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC4AA921625AB7004BC6CA /* Order.swift */; };
+		2CCC4AAB21625AB7004BC6CA /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CCC4AA921625AB7004BC6CA /* Order.swift */; };
 		A2E2E999215D1414001926C3 /* OrderingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E2E998215D1414001926C3 /* OrderingModel.swift */; };
 		A2E2E99B215D14C2001926C3 /* FakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E2E99A215D14C2001926C3 /* FakeData.json */; };
 		BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF69F215D112D00003770 /* AppDelegate.swift */; };
@@ -71,6 +73,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2CCC4AA921625AB7004BC6CA /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		A2E2E998215D1414001926C3 /* OrderingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingModel.swift; sourceTree = "<group>"; };
 		A2E2E99A215D14C2001926C3 /* FakeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeData.json; sourceTree = "<group>"; };
 		BEDDF69C215D112D00003770 /* AskQuentinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskQuentinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +149,7 @@
 				BEDDF6A8215D112E00003770 /* LaunchScreen.storyboard */,
 				BEDDF6AB215D112E00003770 /* Info.plist */,
 				A2E2E99A215D14C2001926C3 /* FakeData.json */,
+				2CCC4AA921625AB7004BC6CA /* Order.swift */,
 			);
 			path = AskQuentinha;
 			sourceTree = "<group>";
@@ -312,6 +316,7 @@
 			files = (
 				A2E2E999215D1414001926C3 /* OrderingModel.swift in Sources */,
 				BEDDF6A2215D112D00003770 /* ViewController.swift in Sources */,
+				2CCC4AAA21625AB7004BC6CA /* Order.swift in Sources */,
 				BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +327,7 @@
 			files = (
 				BEDDF6E02162410000003770 /* PaymentInterfaceController.swift in Sources */,
 				BEDDF6C9215D113F00003770 /* NotificationController.swift in Sources */,
+				2CCC4AAB21625AB7004BC6CA /* Order.swift in Sources */,
 				BEDDF6DC215D21DE00003770 /* MealInterfaceController.swift in Sources */,
 				BEDDF6CB215D113F00003770 /* ComplicationController.swift in Sources */,
 				BEDDF6C7215D113F00003770 /* ExtensionDelegate.swift in Sources */,
