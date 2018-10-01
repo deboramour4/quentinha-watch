@@ -123,7 +123,11 @@
                                 <separator alignment="left" id="WIQ-No-6eu">
                                     <color key="color" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </separator>
-                                <button width="1" alignment="left" title="Finalizar" id="sJ4-zZ-ga6"/>
+                                <button width="1" alignment="left" title="Finalizar" id="sJ4-zZ-ga6">
+                                    <connections>
+                                        <action selector="didFinishedOrder" destination="BEB-Nz-B6H" id="LgT-8S-cAK"/>
+                                    </connections>
+                                </button>
                             </items>
                         </group>
                     </items>
