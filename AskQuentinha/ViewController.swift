@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		
+		self.model.delegate = self
+		
         if WCSession.isSupported() {
             WCSession.default.delegate = self
             WCSession.default.activate()
@@ -45,11 +48,17 @@ extension ViewController: WCSessionDelegate {
     }
     
     func sessionDidBecomeInactive(_ session: WCSession) {
-        // do nothing
     }
     
     func sessionDidDeactivate(_ session: WCSession) {
-        // do nothing
     }
     
+}
+
+extension ViewController: OrderingModelDelegate {
+	func send(message: [String : Any]) {
+		if WCSession.default.isReachable {
+			WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+		}
+	}
 }

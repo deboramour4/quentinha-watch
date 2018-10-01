@@ -9,7 +9,13 @@
 import UIKit
 import UserNotifications
 
+protocol OrderingModelDelegate {
+	func send(message: [String: Any])
+}
+
 class OrderingModel: NSObject {
+	
+	var delegate: OrderingModelDelegate?
 	
 	private var notificationCenter = UNUserNotificationCenter.current()
 	private (set) var currentStatus = OrderStatus.noOrder
@@ -33,7 +39,7 @@ class OrderingModel: NSObject {
 				category: statusInfo.category,
 				trigger: UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false))
 		})
-		timer?.resume()
+		self.timer?.resume()
 	}
 	
 	private func stopTimer() {
