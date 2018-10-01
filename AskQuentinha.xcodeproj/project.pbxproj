@@ -25,6 +25,7 @@
 		BEDDF6D2215D113F00003770 /* AskQuentinhaWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = BEDDF6B3215D113E00003770 /* AskQuentinhaWatch.app */; };
 		BEDDF6DC215D21DE00003770 /* MealInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6DB215D21DE00003770 /* MealInterfaceController.swift */; };
 		BEDDF6DE215E44AB00003770 /* MealRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6DD215E44AB00003770 /* MealRowController.swift */; };
+		BEDDF6E02162410000003770 /* PaymentInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6DF2162410000003770 /* PaymentInterfaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		BEDDF6CF215D113F00003770 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		BEDDF6DB215D21DE00003770 /* MealInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInterfaceController.swift; sourceTree = "<group>"; };
 		BEDDF6DD215E44AB00003770 /* MealRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRowController.swift; sourceTree = "<group>"; };
+		BEDDF6DF2162410000003770 /* PaymentInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInterfaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				BEDDF6CF215D113F00003770 /* PushNotificationPayload.apns */,
 				BEDDF6DB215D21DE00003770 /* MealInterfaceController.swift */,
 				BEDDF6DD215E44AB00003770 /* MealRowController.swift */,
+				BEDDF6DF2162410000003770 /* PaymentInterfaceController.swift */,
 			);
 			path = "AskQuentinhaWatch Extension";
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEDDF6E02162410000003770 /* PaymentInterfaceController.swift in Sources */,
 				BEDDF6C9215D113F00003770 /* NotificationController.swift in Sources */,
 				BEDDF6DC215D21DE00003770 /* MealInterfaceController.swift in Sources */,
 				BEDDF6CB215D113F00003770 /* ComplicationController.swift in Sources */,

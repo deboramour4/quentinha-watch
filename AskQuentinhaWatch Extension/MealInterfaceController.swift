@@ -37,6 +37,10 @@ class MealInterfaceController: WKInterfaceController {
         }
     }
 
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        //table
+    }
+
     override func willActivate() {
         super.willActivate()
     }
