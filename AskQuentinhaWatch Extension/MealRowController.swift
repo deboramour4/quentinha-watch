@@ -9,18 +9,14 @@
 import WatchKit
 
 class MealRowController: NSObject {
+
     @IBOutlet var mainMealLabel: WKInterfaceLabel!
-    @IBOutlet var garnishLabel: WKInterfaceLabel!
+    @IBOutlet var rowGroup: WKInterfaceGroup!
+
 
     var mainMeal: String? {
         didSet {
             mainMealLabel.setText(mainMeal)
-        }
-    }
-
-    var garnish: String? {
-        didSet {
-            garnishLabel.setText(garnish)
         }
     }
 
