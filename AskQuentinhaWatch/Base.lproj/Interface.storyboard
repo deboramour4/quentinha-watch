@@ -98,12 +98,42 @@
             </objects>
             <point key="canvasLocation" x="481" y="345"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Payment Interface Controller-->
         <scene sceneID="zcz-Qf-jSj">
             <objects>
-                <controller id="BEB-Nz-B6H"/>
+                <controller id="BEB-Nz-B6H" customClass="PaymentInterfaceController" customModule="AskQuentinhaWatch_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" spacing="10" id="eQr-XW-p1z">
+                            <items>
+                                <group width="1" alignment="left" layout="vertical" spacing="6" id="jzw-lX-51n">
+                                    <items>
+                                        <label alignment="left" text="Pagamento" id="3GF-dj-qIt">
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <button width="1" alignment="left" title="Dinheiro" id="p9d-fe-kgx"/>
+                                        <paymentButton width="1" alignment="left" id="H5U-Sa-cxU"/>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" id="Ce7-FI-pgQ">
+                                    <items>
+                                        <label alignment="left" text="Valor:" id="Bzu-Er-NsW"/>
+                                        <label alignment="right" text="R$6,00" id="OBI-hM-KHT"/>
+                                    </items>
+                                </group>
+                                <separator alignment="left" id="WIQ-No-6eu">
+                                    <color key="color" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </separator>
+                                <button width="1" alignment="left" title="Finalizar" id="sJ4-zZ-ga6">
+                                    <connections>
+                                        <action selector="didFinishedOrder" destination="BEB-Nz-B6H" id="LgT-8S-cAK"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="714" y="345"/>
+            <point key="canvasLocation" x="713" y="365"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

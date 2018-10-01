@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import WatchConnectivity
 
 class ViewController: UIViewController {
 	
 	let model = OrderingModel()
 	
+    @IBOutlet weak var testLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
     }
 
 	@IBAction func startPreparing(_ sender: Any) {
@@ -25,3 +32,24 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: WCSessionDelegate {
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        DispatchQueue.main.async {
+            self.testLabel.text = String(describing: message)
+        }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("Session default in ViewController activate with \(activationState.rawValue)")
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        // do nothing
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        // do nothing
+    }
+    
+}
