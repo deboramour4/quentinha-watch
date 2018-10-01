@@ -12,7 +12,8 @@ import WatchConnectivity
 class ViewController: UIViewController {
 	
     var myOrders: [Order] = []
-	let model = OrderingModel()
+    @IBOutlet weak var ordersTableView: UITableView!
+    let model = OrderingModel()
 	
     @IBOutlet weak var testLabel: UILabel!
     
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
 		
 		self.model.delegate = self
 		
+        self.ordersTableView.dataSource = self
         if WCSession.isSupported() {
             WCSession.default.delegate = self
             WCSession.default.activate()
@@ -44,6 +46,7 @@ extension ViewController: WCSessionDelegate {
         self.myOrders.append(order)
         DispatchQueue.main.async {
             self.testLabel.text = order.mainMeal
+            self.ordersTableView.reloadData()
         }
     }
     
@@ -65,4 +68,20 @@ extension ViewController: OrderingModelDelegate {
 			WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
 		}
 	}
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.myOrders.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell") else { return UITableViewCell() }
+        let order = myOrders[indexPath.row]
+        cell.textLabel?.text = "\(order.garnish ?? "") e \(order.mainMeal ?? "")"
+        
+        return cell
+    }
+    
+    
 }
