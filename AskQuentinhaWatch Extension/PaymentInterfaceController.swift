@@ -43,6 +43,7 @@ class PaymentInterfaceController: WKInterfaceController {
     func sendOrder(order: [String : Any]) {
         if WCSession.default.isReachable {
             WCSession.default.sendMessage(order, replyHandler: nil, errorHandler: nil)
+            dismiss()
         }
     }
 

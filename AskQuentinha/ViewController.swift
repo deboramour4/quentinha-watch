@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     var myOrders: [Order] = []
     @IBOutlet weak var ordersTableView: UITableView!
     let model = OrderingModel()
-	
-    @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +43,6 @@ extension ViewController: WCSessionDelegate {
         let order = Order.transformToObject(order: message)
         self.myOrders.append(order)
         DispatchQueue.main.async {
-            self.testLabel.text = order.mainMeal
             self.ordersTableView.reloadData()
         }
     }
