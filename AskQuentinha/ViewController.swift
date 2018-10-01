@@ -11,6 +11,7 @@ import WatchConnectivity
 
 class ViewController: UIViewController {
 	
+    var myOrders: [Order] = []
 	let model = OrderingModel()
 	
     @IBOutlet weak var testLabel: UILabel!
@@ -38,8 +39,10 @@ class ViewController: UIViewController {
 extension ViewController: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        let order = Order.transformToObject(order: message)
+        self.myOrders.append(order)
         DispatchQueue.main.async {
-            self.testLabel.text = String(describing: message)
+            self.testLabel.text = order.mainMeal
         }
     }
     

@@ -35,8 +35,9 @@ class PaymentInterfaceController: WKInterfaceController {
     }
     
     func completeOrder() -> [String : Any] {
-        let order: [String : Any] = ["cost": 10.0, "paymentType": "cash"]
-        return order
+        let order = Order.current
+        let result: [String : Any] = order.transformToDict()
+        return result
     }
     
     func sendOrder(order: [String : Any]) {
