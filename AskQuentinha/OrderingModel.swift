@@ -9,11 +9,11 @@
 import UIKit
 import UserNotifications
 
-enum OrderStatus {
-	case confirmed
-	case preparing
-	case outForDelivery
-	case ready
+enum OrderStatus: String {
+	case confirmed = "😉"
+	case preparing = "👩‍🍳"
+	case outForDelivery = "🚗"
+	case ready = "🤩"
 }
 
 class OrderingModel: NSObject {

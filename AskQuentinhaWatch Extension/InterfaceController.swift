@@ -8,14 +8,21 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var emojiLabel: WKInterfaceLabel!
     @IBOutlet var backgroundGroup: WKInterfaceGroup!
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
         
         // Configure interface objects here.
     }
@@ -37,4 +44,16 @@ class InterfaceController: WKInterfaceController {
                                                  repeatCount: 1)
     }
 
+}
+
+extension InterfaceController: WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("Ativa")
+    }
+
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        emojiLabel.setText(message["status"] as? String)
+    }
+    
 }
