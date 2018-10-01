@@ -31,20 +31,20 @@ enum OrderStatus {
 		}
 	}
 	
-	var info: (title: String, body: String, category: String) {
+	var info: (title: String, body: String, category: String, emoji: String) {
 		switch self {
 		case .noOrder:
-			return ("Nenhum pedido no momento", "", "")
+			return ("Nenhum pedido no momento", "", "", "")
 		case .processed:
-			return ("Pedido processado", "Aguardando confirmação do restaurante", "ProcessedNotification")
+			return ("Pedido processado", "Aguardando confirmação do restaurante", "ProcessedNotification", "😉")
 		case .confirmed:
-			return ("Pedido confirmado pelo restaurante", "Iniciaremos logo o preparo", "ConfirmedNotification")
+			return ("Pedido confirmado pelo restaurante", "Iniciaremos logo o preparo", "ConfirmedNotification", "✅")
 		case .preparing:
-			return ("Iniciado o preparo do pedido", "Previsão de pronto daqui a 2 mins", "PreparingNotification")
+			return ("Iniciado o preparo do pedido", "Previsão de pronto daqui a 2 mins", "PreparingNotification", "👨‍🍳")
 		case .outForDelivery:
-			return ("Saiu para entrega", "Previsão de chegada daqui a 1 min", "OutForDeliveryNotification")
+			return ("Saiu para entrega", "Previsão de chegada daqui a 1 min", "OutForDeliveryNotification", "🚗")
 		case .ready:
-			return ("Tamo aqui", "Pode vir buscar aqui na entrada", "ReadyNotification")
+			return ("Tamo aqui", "Pode vir buscar aqui na entrada", "ReadyNotification", "🍲")
 		}
 	}
 }
