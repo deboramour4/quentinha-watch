@@ -34,23 +34,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    func sendMessage(status: OrderStatus) {
-        if WCSession.default.isReachable {
-            
-            let message = ["status": status.rawValue]
-            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
-            
-        }
-    }
-    
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-    }
-    
-    func sessionDidBecomeInactive(_ session: WCSession) {
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-    }
 }
 
 extension ViewController: WCSessionDelegate {
