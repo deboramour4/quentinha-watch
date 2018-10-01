@@ -9,7 +9,7 @@
 import UIKit
 import WatchConnectivity
 
-class ViewController: UIViewController, WCSessionDelegate {
+class ViewController: UIViewController {
 	
 	let model = OrderingModel()
 	
