@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A264AB0921625B14003894BE /* OrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A264AB0821625B14003894BE /* OrderStatus.swift */; };
 		A2E2E999215D1414001926C3 /* OrderingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E2E998215D1414001926C3 /* OrderingModel.swift */; };
 		A2E2E99B215D14C2001926C3 /* FakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E2E99A215D14C2001926C3 /* FakeData.json */; };
 		BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF69F215D112D00003770 /* AppDelegate.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A264AB0821625B14003894BE /* OrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatus.swift; sourceTree = "<group>"; };
 		A2E2E998215D1414001926C3 /* OrderingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingModel.swift; sourceTree = "<group>"; };
 		A2E2E99A215D14C2001926C3 /* FakeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeData.json; sourceTree = "<group>"; };
 		BEDDF69C215D112D00003770 /* AskQuentinha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskQuentinha.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +145,7 @@
 				BEDDF69F215D112D00003770 /* AppDelegate.swift */,
 				BEDDF6A1215D112D00003770 /* ViewController.swift */,
 				A2E2E998215D1414001926C3 /* OrderingModel.swift */,
+				A264AB0821625B14003894BE /* OrderStatus.swift */,
 				BEDDF6A3215D112D00003770 /* Main.storyboard */,
 				BEDDF6A6215D112E00003770 /* Assets.xcassets */,
 				BEDDF6A8215D112E00003770 /* LaunchScreen.storyboard */,
@@ -313,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A264AB0921625B14003894BE /* OrderStatus.swift in Sources */,
 				A2E2E999215D1414001926C3 /* OrderingModel.swift in Sources */,
 				BEDDF6A2215D112D00003770 /* ViewController.swift in Sources */,
 				BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */,
@@ -497,13 +501,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = AskQuentinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -517,13 +521,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = AskQuentinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -536,14 +540,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = "AskQuentinhaWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -558,14 +562,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = "AskQuentinhaWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -581,10 +585,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				IBSC_MODULE = AskQuentinhaWatch_Extension;
 				INFOPLIST_FILE = AskQuentinhaWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -600,10 +604,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				IBSC_MODULE = AskQuentinhaWatch_Extension;
 				INFOPLIST_FILE = AskQuentinhaWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

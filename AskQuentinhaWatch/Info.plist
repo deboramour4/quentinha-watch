@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>br.com.academy.AskQuentinha</string>
+	<string>br.com.paulocardosob.AskQuentinha</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
