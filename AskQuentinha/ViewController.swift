@@ -12,15 +12,14 @@ import WatchConnectivity
 class ViewController: UIViewController, WCSessionDelegate {
 	
 	let model = OrderingModel()
-    var lastTime: CFAbsoluteTime = CFAbsoluteTime()
+	
+    @IBOutlet weak var testLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if (WCSession.isSupported()) {
-            let session = WCSession.default
-            session.delegate = self
-            session.activate()
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
         }
     }
 
@@ -52,3 +51,24 @@ class ViewController: UIViewController, WCSessionDelegate {
     }
 }
 
+extension ViewController: WCSessionDelegate {
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        DispatchQueue.main.async {
+            self.testLabel.text = String(describing: message)
+        }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("Session default in ViewController activate with \(activationState.rawValue)")
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        // do nothing
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        // do nothing
+    }
+    
+}
