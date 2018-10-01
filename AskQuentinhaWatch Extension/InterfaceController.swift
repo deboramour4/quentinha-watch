@@ -53,7 +53,8 @@ extension InterfaceController: WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        emojiLabel.setText(message["status"] as? String)
+        let mes = message["status"] as? (title: String, body: String, category: String, emoji: String)
+        emojiLabel.setText(mes?.title)
     }
     
 }
