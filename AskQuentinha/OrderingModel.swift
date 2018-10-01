@@ -33,11 +33,18 @@ class OrderingModel: NSObject {
 			
 			self.currentStatus = self.currentStatus.next
 			let statusInfo = self.currentStatus.info
-			self.createLocalNotification(
-				title: statusInfo.title,
-				body: statusInfo.body,
-				category: statusInfo.category,
-				trigger: UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false))
+			
+			if self.currentStatus == .noOrder {
+				self.stopTimer()
+			} else {
+				self.createLocalNotification(
+					title: statusInfo.title,
+					body: statusInfo.body,
+					category: statusInfo.category,
+					trigger: UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false))
+				
+				self.delegate?.send(message: ["status": statusInfo])
+			}
 		})
 		self.timer?.resume()
 	}

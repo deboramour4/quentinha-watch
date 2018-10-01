@@ -507,13 +507,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = AskQuentinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -527,13 +527,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = AskQuentinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -546,14 +546,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = "AskQuentinhaWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -568,14 +568,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				INFOPLIST_FILE = "AskQuentinhaWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -591,10 +591,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				IBSC_MODULE = AskQuentinhaWatch_Extension;
 				INFOPLIST_FILE = AskQuentinhaWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -610,10 +610,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4YUW7D4357;
+				DEVELOPMENT_TEAM = VA7DWMQ39T;
 				IBSC_MODULE = AskQuentinhaWatch_Extension;
 				INFOPLIST_FILE = AskQuentinhaWatch/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.AskQuentinha.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
