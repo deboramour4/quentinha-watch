@@ -12,6 +12,11 @@ import WatchConnectivity
 
 class PaymentInterfaceController: WKInterfaceController {
 
+    @IBOutlet var cashButton: WKInterfaceButton!
+    @IBOutlet var creditCardButton: WKInterfaceButton!
+
+    var payWithCash : Bool? = false
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -41,6 +46,37 @@ class PaymentInterfaceController: WKInterfaceController {
     
     func sendOrder(order: [String : Any]) {
         WCSession.default.sendMessage(order, replyHandler: nil, errorHandler: nil)
+    }
+    @IBAction func cashAction() {
+        if let p = payWithCash {
+            if (p) {
+                payWithCash = nil
+                cashButton.setBackgroundColor(UIColor.defaultGray)
+            } else {
+                payWithCash = true
+                cashButton.setBackgroundColor(UIColor.gray)
+                creditCardButton.setBackgroundColor(UIColor.defaultGray)
+            }
+        } else {
+            payWithCash = true
+            cashButton.setBackgroundColor(UIColor.gray)
+        }
+    }
+
+    @IBAction func applePayAction() {
+        if let p = payWithCash {
+            if (!p) {
+                payWithCash = nil
+                creditCardButton.setBackgroundColor(UIColor.defaultGray)
+            } else {
+                payWithCash = false
+                creditCardButton.setBackgroundColor(UIColor.gray)
+                cashButton.setBackgroundColor(UIColor.defaultGray)
+            }
+        } else {
+            payWithCash = false
+            creditCardButton.setBackgroundColor(UIColor.gray)
+        }
     }
 
 }

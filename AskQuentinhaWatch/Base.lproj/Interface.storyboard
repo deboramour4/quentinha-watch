@@ -119,8 +119,16 @@
                                         <label alignment="left" text="Pagamento" id="3GF-dj-qIt">
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
-                                        <button width="1" alignment="left" title="Dinheiro" id="p9d-fe-kgx"/>
-                                        <paymentButton width="1" alignment="left" id="H5U-Sa-cxU"/>
+                                        <button width="1" alignment="left" title="Dinheiro" id="p9d-fe-kgx">
+                                            <connections>
+                                                <action selector="cashAction" destination="BEB-Nz-B6H" id="bMz-Y0-ngB"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" alignment="left" title="Cartão" id="gJ1-DE-FPT">
+                                            <connections>
+                                                <action selector="applePayAction" destination="BEB-Nz-B6H" id="Pwg-wd-xYT"/>
+                                            </connections>
+                                        </button>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" id="Ce7-FI-pgQ">
@@ -140,6 +148,10 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="cashButton" destination="p9d-fe-kgx" id="iT4-db-R6d"/>
+                        <outlet property="creditCardButton" destination="gJ1-DE-FPT" id="Qef-6C-ABn"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="749" y="345"/>
