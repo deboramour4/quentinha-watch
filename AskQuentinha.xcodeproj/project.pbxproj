@@ -26,6 +26,7 @@
 		BEDDF6DC215D21DE00003770 /* MealInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6DB215D21DE00003770 /* MealInterfaceController.swift */; };
 		BEDDF6DE215E44AB00003770 /* MealRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6DD215E44AB00003770 /* MealRowController.swift */; };
 		BEDDF6E02162410000003770 /* PaymentInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6DF2162410000003770 /* PaymentInterfaceController.swift */; };
+		BEDDF6E22162464300003770 /* GarnishRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDDF6E12162464300003770 /* GarnishRowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		BEDDF6DB215D21DE00003770 /* MealInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInterfaceController.swift; sourceTree = "<group>"; };
 		BEDDF6DD215E44AB00003770 /* MealRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRowController.swift; sourceTree = "<group>"; };
 		BEDDF6DF2162410000003770 /* PaymentInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInterfaceController.swift; sourceTree = "<group>"; };
+		BEDDF6E12162464300003770 /* GarnishRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GarnishRowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				BEDDF6DB215D21DE00003770 /* MealInterfaceController.swift */,
 				BEDDF6DD215E44AB00003770 /* MealRowController.swift */,
 				BEDDF6DF2162410000003770 /* PaymentInterfaceController.swift */,
+				BEDDF6E12162464300003770 /* GarnishRowController.swift */,
 			);
 			path = "AskQuentinhaWatch Extension";
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				BEDDF6DC215D21DE00003770 /* MealInterfaceController.swift in Sources */,
 				BEDDF6CB215D113F00003770 /* ComplicationController.swift in Sources */,
 				BEDDF6C7215D113F00003770 /* ExtensionDelegate.swift in Sources */,
+				BEDDF6E22162464300003770 /* GarnishRowController.swift in Sources */,
 				BEDDF6C5215D113F00003770 /* InterfaceController.swift in Sources */,
 				BEDDF6DE215E44AB00003770 /* MealRowController.swift in Sources */,
 			);
