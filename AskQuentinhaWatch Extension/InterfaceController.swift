@@ -73,6 +73,15 @@ class InterfaceController: WKInterfaceController {
     
     func cancelCurrentOrder() {
         WCSession.default.sendMessage(["action": "cancelOrder"], replyHandler: nil, errorHandler: nil)
+        resetInterface()
+    }
+    
+    func resetInterface() {
+        titleLabel.setText("Faça seu pedido")
+        emojiLabel.setText("😃")
+        self.toggleMenuButton(noOrder: true)
+        backgroundGroup.setBackgroundImageNamed("Progress")
+        contTimer = 0
     }
 
     /*It Changes the content and function of the menu button
@@ -105,7 +114,6 @@ extension InterfaceController: WCSessionDelegate {
             DispatchQueue.main.async {
                 self.toggleMenuButton(noOrder: true)
             }
-
             contTimer = 0
 
         } else {
@@ -116,10 +124,11 @@ extension InterfaceController: WCSessionDelegate {
             backgroundGroup.startAnimatingWithImages(in: NSRange(location: contTimer, length: 19),
                                                          duration: 1,
                                                          repeatCount: 1)
-                contTimer = contTimer+20
-
-            DispatchQueue.main.async {
-                self.toggleMenuButton(noOrder: false)
+            contTimer = contTimer+20
+            if !orderInProgress {
+                DispatchQueue.main.async {
+                    self.toggleMenuButton(noOrder: false)
+                }
             }
         }
     }

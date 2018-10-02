@@ -14,7 +14,7 @@ class Order {
     var paymentType: String?
     
     var isValid: Bool {
-        return garnish == nil && mainMeal != nil && paymentType != nil
+        return garnish != nil && mainMeal != nil && paymentType != nil
     }
     
     func transformToDict() -> [String: Any] {
