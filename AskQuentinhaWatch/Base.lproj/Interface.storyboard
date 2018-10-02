@@ -14,22 +14,41 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AskQuentinhaWatch" customModuleProvider="target">
                     <items>
-                        <group width="100" height="100" alignment="center" verticalAlignment="center" backgroundImage="Progress0" id="725-lv-CZg">
+                        <group width="1" alignment="left" layout="vertical" spacing="8" id="gvo-D3-ooT">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="😃" id="H0g-xH-Fq4">
-                                    <fontDescription key="font" type="system" pointSize="42"/>
-                                </label>
+                                <group width="120" height="120" alignment="center" backgroundImage="Progress0" id="725-lv-CZg">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="😃" id="H0g-xH-Fq4">
+                                            <fontDescription key="font" type="system" pointSize="42"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" spacing="28" id="7EV-Rh-3WK">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="bottom" text="Faça seu pedido" id="B2c-Nr-wbA">
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <button width="1" alignment="left" verticalAlignment="bottom" title="Pedir" id="mKQ-bu-o4P">
+                                            <color key="titleColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="hYm-E6-s3d" kind="modal" identifier="chooseMeal" id="BM2-SF-Gaz"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <label alignment="center" verticalAlignment="bottom" text="Faça seu pedido" id="B2c-Nr-wbA">
-                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </label>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Pedir" id="mKQ-bu-o4P">
-                            <connections>
-                                <segue destination="hYm-E6-s3d" kind="modal" id="BM2-SF-Gaz"/>
-                            </connections>
-                        </button>
                     </items>
+                    <menu key="menu" id="6oU-8J-HNt">
+                        <items>
+                            <menuItem title="Novo Pedido" icon="add" id="9Fd-az-H0R">
+                                <connections>
+                                    <action selector="newOrderAction" destination="AgC-eL-Hgc" id="TGc-lo-kbI"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
                     <connections>
                         <outlet property="backgroundGroup" destination="725-lv-CZg" id="MO4-nD-xOB"/>
                         <outlet property="emojiLabel" destination="H0g-xH-Fq4" id="IXa-tH-UMp"/>
@@ -37,12 +56,12 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="366"/>
         </scene>
-        <!--Meal-->
+        <!--MealInterfaceController-->
         <scene sceneID="49a-VV-gvQ">
             <objects>
-                <controller identifier="Meal" id="hYm-E6-s3d" customClass="MealInterfaceController" customModule="AskQuentinhaWatch_Extension">
+                <controller identifier="MealInterfaceController" id="hYm-E6-s3d" customClass="MealInterfaceController" customModule="AskQuentinhaWatch_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" spacing="16" id="CSl-Hr-OMq">
                             <items>
@@ -56,8 +75,8 @@
                                                 <tableRow identifier="GarnishRow" id="9ha-kZ-YNG" customClass="GarnishRowController" customModule="AskQuentinhaWatch_Extension">
                                                     <group key="rootItem" width="1" alignment="left" spacing="8" id="FbU-kw-R4c">
                                                         <items>
-                                                            <separator height="1" heightAdjustment="-4" alignment="left" verticalAlignment="center" id="pT5-kN-TOn">
-                                                                <color key="color" red="1" green="0.089805245425000013" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <separator height="1" heightAdjustment="-8" alignment="left" verticalAlignment="center" id="pT5-kN-TOn">
+                                                                <color key="color" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </separator>
                                                             <label height="1" alignment="left" text="Arroz" id="OFf-cs-F21"/>
                                                         </items>
@@ -81,8 +100,8 @@
                                                 <tableRow identifier="MainMealRow" id="zuw-k5-LWJ" customClass="MealRowController" customModule="AskQuentinhaWatch_Extension">
                                                     <group key="rootItem" width="1" alignment="left" spacing="8" id="ALp-cU-coG">
                                                         <items>
-                                                            <separator alignment="left" id="YxC-jR-2xz">
-                                                                <color key="color" red="1" green="0.18431372549019609" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <separator height="1" heightAdjustment="-8" alignment="left" verticalAlignment="center" id="YxC-jR-2xz">
+                                                                <color key="color" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </separator>
                                                             <label height="1" alignment="left" text="Carne" id="mpJ-U0-0qg"/>
                                                         </items>
@@ -108,20 +127,48 @@
             </objects>
             <point key="canvasLocation" x="486" y="345"/>
         </scene>
-        <!--Payment Interface Controller-->
+        <!--PaymentInterfaceController-->
         <scene sceneID="zcz-Qf-jSj">
             <objects>
-                <controller id="BEB-Nz-B6H" customClass="PaymentInterfaceController" customModule="AskQuentinhaWatch_Extension">
+                <controller identifier="PaymentInterfaceController" id="BEB-Nz-B6H" customClass="PaymentInterfaceController" customModule="AskQuentinhaWatch_Extension">
                     <items>
                         <group width="1" alignment="left" layout="vertical" spacing="10" id="eQr-XW-p1z">
                             <items>
-                                <group width="1" alignment="left" layout="vertical" spacing="6" id="jzw-lX-51n">
+                                <group width="1" alignment="left" layout="vertical" spacing="4" id="jzw-lX-51n">
                                     <items>
                                         <label alignment="left" text="Pagamento" id="3GF-dj-qIt">
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
-                                        <button width="1" alignment="left" title="Dinheiro" id="p9d-fe-kgx"/>
-                                        <paymentButton width="1" alignment="left" id="H5U-Sa-cxU"/>
+                                        <button alignment="left" id="p9d-fe-kgx">
+                                            <group key="contentGroup" width="1" height="40" alignment="left" spacing="8" id="Itd-Wd-pJd">
+                                                <items>
+                                                    <separator height="1" heightAdjustment="-8" alignment="left" verticalAlignment="center" id="gFL-8o-p2a">
+                                                        <color key="color" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </separator>
+                                                    <label width="0.0" height="100" alignment="left" text="Dinheiro" id="qCQ-CW-1ez"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.94901960784313721" green="0.95686274509803915" blue="1" alpha="0.14000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="8" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="cashAction" destination="BEB-Nz-B6H" id="bMz-Y0-ngB"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="left" id="gJ1-DE-FPT">
+                                            <group key="contentGroup" width="1" height="40" alignment="left" spacing="8" id="QJT-CB-g1k">
+                                                <items>
+                                                    <separator height="1" heightAdjustment="-8" alignment="left" verticalAlignment="center" id="1Sd-zY-gpc">
+                                                        <color key="color" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </separator>
+                                                    <label width="0.0" height="100" alignment="left" text="Cartão" id="ibh-F6-V0V"/>
+                                                </items>
+                                                <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="1" alpha="0.14000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <edgeInsets key="margins" left="8" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
+                                            <connections>
+                                                <action selector="applePayAction" destination="BEB-Nz-B6H" id="Pwg-wd-xYT"/>
+                                            </connections>
+                                        </button>
                                     </items>
                                 </group>
                                 <group width="1" alignment="left" id="Ce7-FI-pgQ">
@@ -131,9 +178,11 @@
                                     </items>
                                 </group>
                                 <separator alignment="left" id="WIQ-No-6eu">
-                                    <color key="color" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="color" red="0.94901960780000005" green="0.95686274510000002" blue="1" alpha="0.14000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </separator>
                                 <button width="1" alignment="left" title="Finalizar" id="sJ4-zZ-ga6">
+                                    <color key="titleColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="didFinishedOrder" destination="BEB-Nz-B6H" id="LgT-8S-cAK"/>
                                     </connections>
@@ -141,9 +190,13 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="cashButton" destination="Itd-Wd-pJd" id="l86-qB-zRL"/>
+                        <outlet property="creditCardButton" destination="QJT-CB-g1k" id="ldD-QS-hxE"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="749" y="345"/>
+            <point key="canvasLocation" x="749" y="363"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

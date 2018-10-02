@@ -22,17 +22,17 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            WCSession.default.activate()
-        }
-        
         // Configure interface objects here.
     }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
     }
     
     override func didDeactivate() {
@@ -42,6 +42,13 @@ class InterfaceController: WKInterfaceController {
     
     override func didAppear() {
         
+    }
+    @IBAction func newOrderAction() {
+        //presentController(withName: "MealInterfaceController", context: nil)
+
+        //pushController(withName: "MealInterfaceController", context: nil)
+
+        presentController(withNames: ["MealInterfaceController", "PaymentInterfaceController"], contexts: nil)
     }
 
 }

@@ -18,8 +18,16 @@ class MealInterfaceController: WKInterfaceController {
     var garnishs = [("Arroz",false) , ("Baião",false),("Farofa",false) , ("Salada",false) ]
     var mainMeals = [("Frango", false), ("Carne", false), ("Soja",false)]
 
-    var garnishSelected : String?
-    var mainMealSelected : String?
+    var garnishSelected : String? {
+        didSet {
+            Order.current.garnish = garnishSelected
+        }
+    }
+    var mainMealSelected : String? {
+        didSet {
+            Order.current.mainMeal = mainMealSelected
+        }
+    }
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -61,7 +69,7 @@ class MealInterfaceController: WKInterfaceController {
                 //Select the row
                 garnishSelected = garnishs[rowIndex].0
                 garnishs[rowIndex].1 = true
-                row.rowGroup.setBackgroundColor(UIColor.gray)
+                row.rowGroup.setBackgroundColor(UIColor.darkGray)
             }
         }
 
@@ -86,7 +94,7 @@ class MealInterfaceController: WKInterfaceController {
                 //Select the row
                 mainMealSelected = mainMeals[rowIndex].0
                 mainMeals[rowIndex].1 = true
-                row.rowGroup.setBackgroundColor(UIColor.gray)
+                row.rowGroup.setBackgroundColor(UIColor.darkGray)
             }
         }
     }
