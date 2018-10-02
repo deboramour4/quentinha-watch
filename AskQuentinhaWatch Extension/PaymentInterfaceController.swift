@@ -15,7 +15,15 @@ class PaymentInterfaceController: WKInterfaceController {
     @IBOutlet var cashButton: WKInterfaceGroup!
     @IBOutlet var creditCardButton: WKInterfaceGroup!
 
-    var payWithCash : Bool? = false
+    var payWithCash : Bool? = false {
+        didSet {
+            if let withCash = payWithCash {
+                Order.current.paymentType = withCash ? "Dinheiro" : "Cartão"
+            } else {
+                Order.current.paymentType = "Dinheiro"
+            }
+        }
+    }
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -40,12 +48,16 @@ class PaymentInterfaceController: WKInterfaceController {
     }
     
     func completeOrder() -> [String : Any] {
-        let order: [String : Any] = ["cost": 10.0, "paymentType": "cash"]
-        return order
+        let order = Order.current
+        let result: [String : Any] = order.transformToDict()
+        return result
     }
     
     func sendOrder(order: [String : Any]) {
-        WCSession.default.sendMessage(order, replyHandler: nil, errorHandler: nil)
+        if WCSession.default.isReachable {
+            WCSession.default.sendMessage(order, replyHandler: nil, errorHandler: nil)
+            dismiss()
+        }
     }
     @IBAction func cashAction() {
         if let p = payWithCash {

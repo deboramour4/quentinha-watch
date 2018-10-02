@@ -18,8 +18,16 @@ class MealInterfaceController: WKInterfaceController {
     var garnishs = [("Arroz",false) , ("Baião",false),("Farofa",false) , ("Salada",false) ]
     var mainMeals = [("Frango", false), ("Carne", false), ("Soja",false)]
 
-    var garnishSelected : String?
-    var mainMealSelected : String?
+    var garnishSelected : String? {
+        didSet {
+            Order.current.garnish = garnishSelected
+        }
+    }
+    var mainMealSelected : String? {
+        didSet {
+            Order.current.mainMeal = mainMealSelected
+        }
+    }
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)

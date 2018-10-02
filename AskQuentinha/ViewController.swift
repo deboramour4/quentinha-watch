@@ -11,15 +11,16 @@ import WatchConnectivity
 
 class ViewController: UIViewController {
 	
-	let model = OrderingModel()
-	
-    @IBOutlet weak var testLabel: UILabel!
+    var myOrders: [Order] = []
+    @IBOutlet weak var ordersTableView: UITableView!
+    let model = OrderingModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		self.model.delegate = self
 		
+        self.ordersTableView.dataSource = self
         if WCSession.isSupported() {
             WCSession.default.delegate = self
             WCSession.default.activate()
@@ -39,8 +40,11 @@ class ViewController: UIViewController {
 extension ViewController: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        let order = Order.transformToObject(order: message)
+        self.myOrders.append(order)
+        self.model.makeOrderWithTimer()
         DispatchQueue.main.async {
-            self.testLabel.text = String(describing: message)
+            self.ordersTableView.reloadData()
         }
     }
     
@@ -62,4 +66,21 @@ extension ViewController: OrderingModelDelegate {
             WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
 		}
 	}
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.myOrders.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell") else { return UITableViewCell() }
+        let order = myOrders[indexPath.row]
+        cell.textLabel?.text = "\(order.garnish ?? "") e \(order.mainMeal ?? "")"
+        cell.detailTextLabel?.text = order.paymentType ?? " - "
+        
+        return cell
+    }
+    
+    
 }
