@@ -12,7 +12,10 @@ import WatchConnectivity
 
 
 class InterfaceController: WKInterfaceController {
+    
+    var isAnimating = false
 
+    @IBOutlet var titleLabel: WKInterfaceLabel!
     @IBOutlet var emojiLabel: WKInterfaceLabel!
     @IBOutlet var backgroundGroup: WKInterfaceGroup!
     
@@ -38,10 +41,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func didAppear() {
-        backgroundGroup.setBackgroundImageNamed("Progress")
-        backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 99),
-                                                 duration: 60,
-                                                 repeatCount: 1)
+        
     }
 
 }
@@ -53,7 +53,16 @@ extension InterfaceController: WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        emojiLabel.setText(message["status"] as? String)
+        titleLabel.setText(message["title"] as? String)
+        emojiLabel.setText(message["emoji"] as? String)
+        
+        if !isAnimating {
+            backgroundGroup.setBackgroundImageNamed("Progress")
+            backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 99),
+                                                     duration: 10,
+                                                     repeatCount: 1)
+            isAnimating = true
+        }
     }
     
 }

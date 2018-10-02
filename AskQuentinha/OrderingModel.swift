@@ -43,7 +43,11 @@ class OrderingModel: NSObject {
 					category: statusInfo.category,
 					trigger: UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false))
 				
-				self.delegate?.send(message: ["status": statusInfo])
+                let message = [
+                "title": statusInfo.title,
+                "emoji": statusInfo.emoji
+                ]
+				self.delegate?.send(message: message)
 			}
 		})
 		self.timer?.resume()
