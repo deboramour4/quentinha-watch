@@ -15,7 +15,15 @@ class PaymentInterfaceController: WKInterfaceController {
     @IBOutlet var cashButton: WKInterfaceGroup!
     @IBOutlet var creditCardButton: WKInterfaceGroup!
 
-    var payWithCash : Bool? = false
+    var payWithCash : Bool? = false {
+        didSet {
+            if let withCash = payWithCash {
+                Order.current.paymentType = withCash ? "Dinheiro" : "Cartão"
+            } else {
+                Order.current.paymentType = "Dinheiro"
+            }
+        }
+    }
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)

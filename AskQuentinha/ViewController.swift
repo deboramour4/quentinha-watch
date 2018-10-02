@@ -42,6 +42,7 @@ extension ViewController: WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         let order = Order.transformToObject(order: message)
         self.myOrders.append(order)
+        self.model.makeOrderWithTimer()
         DispatchQueue.main.async {
             self.ordersTableView.reloadData()
         }
@@ -76,6 +77,7 @@ extension ViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell") else { return UITableViewCell() }
         let order = myOrders[indexPath.row]
         cell.textLabel?.text = "\(order.garnish ?? "") e \(order.mainMeal ?? "")"
+        cell.detailTextLabel?.text = order.paymentType ?? " - "
         
         return cell
     }
