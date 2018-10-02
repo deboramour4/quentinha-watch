@@ -33,6 +33,7 @@
                     <connections>
                         <outlet property="backgroundGroup" destination="725-lv-CZg" id="MO4-nD-xOB"/>
                         <outlet property="emojiLabel" destination="H0g-xH-Fq4" id="IXa-tH-UMp"/>
+                        <outlet property="titleLabel" destination="B2c-Nr-wbA" id="Enm-Lx-aSH"/>
                     </connections>
                 </controller>
             </objects>
