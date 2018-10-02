@@ -55,22 +55,24 @@ class InterfaceController: WKInterfaceController {
     }
 
     @objc func newOrderAction() {
+        Order.current = Order()
         presentController(withNames: ["MealInterfaceController", "PaymentInterfaceController"], contexts: nil)
     }
 
     @objc func cancelOrderAction() {
-        
-        
         presentAlert(withTitle: "Cancelar Pedido", message: "Confirma cancelamento?", preferredStyle: .sideBySideButtonsAlert, actions: [
             WKAlertAction(title: "Sim", style: .cancel, handler: {
                 print("order cancel")
-                WCSession.default.sendMessage(["action": "cancelOrder"], replyHandler: nil, errorHandler: nil)
+                self.cancelCurrentOrder()
             }),
             WKAlertAction(title: "Não", style: .default, handler: {
                 print("order not canceled")
             })
         ])
-        
+    }
+    
+    func cancelCurrentOrder() {
+        WCSession.default.sendMessage(["action": "cancelOrder"], replyHandler: nil, errorHandler: nil)
     }
 
     /*It Changes the content and function of the menu button

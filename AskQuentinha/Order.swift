@@ -9,11 +9,13 @@ class Order {
     
     static var current = Order()
     
-    private init() { }
-    
     var garnish: String?
     var mainMeal: String?
     var paymentType: String?
+    
+    var isValid: Bool {
+        return garnish == nil && mainMeal != nil && paymentType != nil
+    }
     
     func transformToDict() -> [String: Any] {
         return [

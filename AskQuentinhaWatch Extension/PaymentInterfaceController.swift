@@ -44,23 +44,36 @@ class PaymentInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    // Called when Finish button is tapped
     @IBAction func didFinishedOrder() {
-        let currentOrder = completeOrder()
-        sendOrder(order: currentOrder)
+        if let currentOrder = completeOrder() {
+            sendOrder(order: currentOrder)
+        }
+        else {
+            presentAlert(withTitle: "Pedido incompleto", message: "Preencha o pedido para continuar", preferredStyle: .alert, actions: [
+                WKAlertAction(title: "OK", style: .cancel, handler: { })
+            ])
+        }
     }
     
-    func completeOrder() -> [String : Any] {
+    // Verify if current Order is valid and return the dictionary
+    func completeOrder() -> [String : Any]? {
         let order = Order.current
+        if !order.isValid {
+            return nil
+        }
         let result: [String : Any] = order.transformToDict()
         return result
     }
     
+    // Verify if default WCSession is reachable and send an Order as message
     func sendOrder(order: [String : Any]) {
         if WCSession.default.isReachable {
             WCSession.default.sendMessage(order, replyHandler: nil, errorHandler: nil)
             dismiss()
         }
     }
+    
     @IBAction func cashAction() {
         if let p = payWithCash {
             if (p) {
