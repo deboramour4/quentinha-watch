@@ -29,8 +29,8 @@
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </label>
                                         <button width="1" alignment="left" verticalAlignment="bottom" title="Pedir" id="mKQ-bu-o4P">
-                                            <color key="titleColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="backgroundColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" red="0.97254901960784312" green="0.0" blue="0.61960784313725492" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <action selector="newOrderButtonAction" destination="AgC-eL-Hgc" id="29Y-A5-1AH"/>
                                             </connections>
@@ -174,8 +174,8 @@
                                     <color key="color" red="0.94901960780000005" green="0.95686274510000002" blue="1" alpha="0.14000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 </separator>
                                 <button width="1" alignment="left" title="Finalizar" id="sJ4-zZ-ga6">
-                                    <color key="titleColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="backgroundColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="0.97254901960784312" green="0.0" blue="0.61960784313725492" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="didFinishedOrder" destination="BEB-Nz-B6H" id="LgT-8S-cAK"/>
                                     </connections>

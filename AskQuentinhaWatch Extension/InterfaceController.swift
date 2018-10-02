@@ -91,11 +91,13 @@ class InterfaceController: WKInterfaceController {
         if noOrder {
             orderInProgress = false
             newOrderButton.setTitle("Pedir")
+            newOrderButton.setBackgroundColor(UIColor.primaryColor)
             self.clearAllMenuItems()
             self.addMenuItem(with: .add, title: "Novo Pedido", action: #selector(InterfaceController.newOrderAction))
         } else {
             orderInProgress = true
             newOrderButton.setTitle("Cancelar")
+            newOrderButton.setBackgroundColor(UIColor.dangerColor)
             self.clearAllMenuItems()
             self.addMenuItem(with: .decline , title: "Cancelar Pedido", action: #selector(InterfaceController.cancelOrderAction))
         }

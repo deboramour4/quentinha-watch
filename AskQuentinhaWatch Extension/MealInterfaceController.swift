@@ -112,4 +112,6 @@ class MealInterfaceController: WKInterfaceController {
 
 extension UIColor {
     static let defaultGray = UIColor(red: 242, green: 244, blue: 255, alpha: 0.14)
+    static let primaryColor = UIColor(red: 248/255, green: 0, blue: 158/255, alpha: 0.17)
+    static let dangerColor = UIColor(red: 250/255, green: 17/255, blue: 79/255, alpha: 0.17)
 }
