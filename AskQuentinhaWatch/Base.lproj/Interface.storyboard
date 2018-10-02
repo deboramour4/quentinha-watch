@@ -14,23 +14,31 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AskQuentinhaWatch" customModuleProvider="target">
                     <items>
-                        <group width="100" height="100" alignment="center" verticalAlignment="center" backgroundImage="Progress0" id="725-lv-CZg">
+                        <group width="1" alignment="left" layout="vertical" spacing="8" id="gvo-D3-ooT">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="😃" id="H0g-xH-Fq4">
-                                    <fontDescription key="font" type="system" pointSize="42"/>
-                                </label>
+                                <group width="120" height="120" alignment="center" backgroundImage="Progress0" id="725-lv-CZg">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="😃" id="H0g-xH-Fq4">
+                                            <fontDescription key="font" type="system" pointSize="42"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="left" layout="vertical" spacing="28" id="7EV-Rh-3WK">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="bottom" text="Faça seu pedido" id="B2c-Nr-wbA">
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </label>
+                                        <button width="1" alignment="left" verticalAlignment="bottom" title="Pedir" id="mKQ-bu-o4P">
+                                            <color key="titleColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="hYm-E6-s3d" kind="modal" identifier="chooseMeal" id="BM2-SF-Gaz"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                         </group>
-                        <label alignment="center" verticalAlignment="bottom" text="Faça seu pedido" id="B2c-Nr-wbA">
-                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </label>
-                        <button width="1" alignment="left" verticalAlignment="bottom" title="Pedir" id="mKQ-bu-o4P">
-                            <color key="titleColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="backgroundColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <segue destination="hYm-E6-s3d" kind="modal" identifier="chooseMeal" id="BM2-SF-Gaz"/>
-                            </connections>
-                        </button>
                     </items>
                     <menu key="menu" id="6oU-8J-HNt">
                         <items>
@@ -48,7 +56,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="220" y="366"/>
         </scene>
         <!--MealInterfaceController-->
         <scene sceneID="49a-VV-gvQ">

@@ -15,7 +15,7 @@ class PaymentInterfaceController: WKInterfaceController {
     @IBOutlet var cashButton: WKInterfaceGroup!
     @IBOutlet var creditCardButton: WKInterfaceGroup!
 
-    var payWithCash : Bool? = false
+    var payWithCash : Bool? = nil
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
