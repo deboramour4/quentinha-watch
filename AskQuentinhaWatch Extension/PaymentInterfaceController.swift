@@ -51,11 +51,11 @@ class PaymentInterfaceController: WKInterfaceController {
         if let p = payWithCash {
             if (p) {
                 payWithCash = nil
-                cashButton.setBackgroundColor(UIColor.defaultGray)
+                cashButton.setBackgroundColor(UIColor.clear)
             } else {
                 payWithCash = true
                 cashButton.setBackgroundColor(UIColor.darkGray)
-                creditCardButton.setBackgroundColor(UIColor.defaultGray)
+                creditCardButton.setBackgroundColor(UIColor.clear)
             }
         } else {
             payWithCash = true
@@ -67,11 +67,11 @@ class PaymentInterfaceController: WKInterfaceController {
         if let p = payWithCash {
             if (!p) {
                 payWithCash = nil
-                creditCardButton.setBackgroundColor(UIColor.defaultGray)
+                creditCardButton.setBackgroundColor(UIColor.clear)
             } else {
                 payWithCash = false
                 creditCardButton.setBackgroundColor(UIColor.darkGray)
-                cashButton.setBackgroundColor(UIColor.defaultGray)
+                cashButton.setBackgroundColor(UIColor.clear)
             }
         } else {
             payWithCash = false
