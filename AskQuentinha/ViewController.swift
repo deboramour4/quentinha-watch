@@ -42,7 +42,7 @@ extension ViewController: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let action = message["action"] as? String {
-            if action == "cancel" {
+            if action == "cancelOrder" {
                 self.model.cancelOrder()
             }
         }
