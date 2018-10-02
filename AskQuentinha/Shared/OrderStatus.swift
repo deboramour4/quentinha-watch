@@ -13,6 +13,7 @@ enum OrderStatus {
 	case preparing
 	case outForDelivery
 	case ready
+    case cancelled
 	
 	var next: OrderStatus {
 		switch self {
@@ -28,6 +29,8 @@ enum OrderStatus {
 			return .ready
 		case .ready:
 			return .noOrder
+        case .cancelled:
+            return .cancelled
 		}
 	}
 	
@@ -45,6 +48,8 @@ enum OrderStatus {
 			return ("Saiu para entrega", "Previsão de chegada daqui a 1 min", "OutForDeliveryNotification", "🚗")
 		case .ready:
 			return ("Tamo aqui", "Pode vir buscar aqui na entrada", "ReadyNotification", "🍲")
+        case .cancelled:
+            return ("Pedido cancelado", "", "", "")
 		}
 	}
 }

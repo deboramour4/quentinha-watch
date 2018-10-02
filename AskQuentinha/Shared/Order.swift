@@ -6,12 +6,12 @@
 import Foundation
 
 class Order {
-    
     static var current = Order()
     
     var garnish: String?
     var mainMeal: String?
     var paymentType: String?
+    var status = OrderStatus.noOrder
     
     var isValid: Bool {
         return garnish != nil && mainMeal != nil && paymentType != nil
@@ -32,4 +32,13 @@ class Order {
         order.paymentType = dict["paymentType"] as? String
         return order
     }
+    
+}
+
+extension Order: Equatable {
+    
+    static func == (lhs: Order, rhs: Order) -> Bool {
+        return lhs.garnish == rhs.garnish && lhs.mainMeal == rhs.mainMeal && lhs.paymentType == rhs.paymentType
+    }
+    
 }

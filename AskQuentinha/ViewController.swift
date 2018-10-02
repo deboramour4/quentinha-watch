@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import Foundation
 
 class ViewController: UIViewController {
 	
@@ -28,10 +29,6 @@ class ViewController: UIViewController {
         }
     }
 
-	// @IBAction func startPreparing(_ sender: Any) {
-	// 	 self.model.makeOrderWithTimer()
-	// }
-	
 	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -49,7 +46,7 @@ extension ViewController: WCSessionDelegate {
         else {
             let order = Order.transformToObject(order: message)
             self.myOrders.append(order)
-            self.model.makeOrderWithTimer()
+            self.model.makeOrderWithTimer(order)
             DispatchQueue.main.async {
                 self.ordersTableView.reloadData()
             }
@@ -74,6 +71,15 @@ extension ViewController: OrderingModelDelegate {
             WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
 		}
 	}
+    
+    func didChangedOrderStatus(_ order: Order) {
+        for o in myOrders where o == order {
+            o.status = order.status
+        }
+        DispatchQueue.main.async {
+            self.ordersTableView.reloadData()
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -84,8 +90,22 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell") else { return UITableViewCell() }
         let order = myOrders[indexPath.row]
-        cell.textLabel?.text = "\(order.garnish ?? "") e \(order.mainMeal ?? "")"
-        cell.detailTextLabel?.text = order.paymentType ?? " - "
+        
+        let description = "\(order.garnish ?? "") e \(order.mainMeal ?? "")"
+        let detail = order.paymentType ?? " - "
+        cell.textLabel?.text = description
+        cell.detailTextLabel?.text = detail
+        
+        if order.status == .cancelled {
+            let attributedDescription: NSMutableAttributedString =  NSMutableAttributedString(string: description)
+            attributedDescription.addAttribute(.strikethroughStyle, value: 2, range: NSMakeRange(0, attributedDescription.length))
+            
+            let attributedDetail: NSMutableAttributedString =  NSMutableAttributedString(string: detail)
+            attributedDetail.addAttribute(.strikethroughStyle, value: 2, range: NSMakeRange(0, attributedDetail.length))
+            
+            cell.textLabel?.attributedText = attributedDescription
+            cell.detailTextLabel?.attributedText = attributedDetail
+        }
         
         return cell
     }
