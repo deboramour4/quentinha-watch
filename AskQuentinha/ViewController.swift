@@ -59,7 +59,7 @@ extension ViewController: WCSessionDelegate {
 extension ViewController: OrderingModelDelegate {
 	func send(message: [String : Any]) {
 		if WCSession.default.isReachable {
-			WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
+            WCSession.default.sendMessage(message, replyHandler: nil, errorHandler: nil)
 		}
 	}
 }
