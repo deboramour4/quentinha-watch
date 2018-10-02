@@ -17,11 +17,14 @@ class OrderingModel: NSObject {
 	
 	var delegate: OrderingModelDelegate?
 	
-	private var notificationCenter = UNUserNotificationCenter.current()
 	private (set) var currentStatus = OrderStatus.noOrder
 	
 	private var timer: DispatchSourceTimer?
 	
+	private var notificationHandler = NotificationHandler.shared
+	
+	
+	/// Set up and start the entire order preparation process.
 	func makeOrderWithTimer() {
 		let queue = DispatchQueue(label: "OrderTimer")
 		
@@ -36,16 +39,18 @@ class OrderingModel: NSObject {
 			
 			if self.currentStatus == .noOrder {
 				self.stopTimer()
+				
+				self.delegate?.send(message: ["NoOrder": "true"])
 			} else {
-				self.createLocalNotification(
+				self.notificationHandler.createLocalNotification(
 					title: statusInfo.title,
 					body: statusInfo.body,
 					category: statusInfo.category,
 					trigger: UNTimeIntervalNotificationTrigger(timeInterval: 0.1, repeats: false))
 				
                 let message = [
-                "title": statusInfo.title,
-                "emoji": statusInfo.emoji
+                	"title": statusInfo.title,
+                	"emoji": statusInfo.emoji
                 ]
 				self.delegate?.send(message: message)
 			}
@@ -57,28 +62,21 @@ class OrderingModel: NSObject {
 		self.timer?.cancel()
 		self.timer = nil
 	}
-	
-	/// Creates a local notification.
-	///
-	/// - Parameters:
-	///   - title: title of notification
-	///   - body: message of notification
-	///   - category: category to use in watch notification interface
-	///   - trigger: trigger, must inherit from UNNotificationTrigger
-	private func createLocalNotification(title: String, body: String, category: String, trigger: UNNotificationTrigger) {
-		self.notificationCenter.getNotificationSettings { (settings) in
-			guard settings.authorizationStatus == .authorized else { return }
-			
-			let content = UNMutableNotificationContent()
-			content.title = title
-			content.body = body
-			content.categoryIdentifier = category
-			
-			let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-			
-			UNUserNotificationCenter.current().add(request) { error in
-				if (error != nil) { print(error!) }
-			}
-		}
+
+	/// Adds a notification to remind the user to place the order at the specified time.
+	func configureCalendarReminder() {
+		var date = DateComponents()
+		date.hour = 9
+		date.minute = 40
+		date.timeZone = TimeZone.current
+		
+		let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+		
+		self.notificationHandler.createLocalNotification(
+			title: "Já pediu sua quentinha de hoje?",
+			body: "Não deixe de pedir",
+			category: "ReminderNotification",
+			trigger: trigger)
 	}
+	
 }

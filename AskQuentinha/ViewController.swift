@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 		
 		self.model.delegate = self
+		self.model.configureCalendarReminder()
 		
         if WCSession.isSupported() {
             WCSession.default.delegate = self

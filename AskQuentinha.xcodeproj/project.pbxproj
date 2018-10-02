@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2468B3C2163980C00A22881 /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2468B3B2163980C00A22881 /* NotificationHandler.swift */; };
 		A264AB0921625B14003894BE /* OrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A264AB0821625B14003894BE /* OrderStatus.swift */; };
 		A2E2E999215D1414001926C3 /* OrderingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E2E998215D1414001926C3 /* OrderingModel.swift */; };
 		A2E2E99B215D14C2001926C3 /* FakeData.json in Resources */ = {isa = PBXBuildFile; fileRef = A2E2E99A215D14C2001926C3 /* FakeData.json */; };
@@ -73,6 +74,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A2468B3B2163980C00A22881 /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 		A264AB0821625B14003894BE /* OrderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderStatus.swift; sourceTree = "<group>"; };
 		A2E2E998215D1414001926C3 /* OrderingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderingModel.swift; sourceTree = "<group>"; };
 		A2E2E99A215D14C2001926C3 /* FakeData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FakeData.json; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				BEDDF6A8215D112E00003770 /* LaunchScreen.storyboard */,
 				BEDDF6AB215D112E00003770 /* Info.plist */,
 				A2E2E99A215D14C2001926C3 /* FakeData.json */,
+				A2468B3B2163980C00A22881 /* NotificationHandler.swift */,
 			);
 			path = AskQuentinha;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				A264AB0921625B14003894BE /* OrderStatus.swift in Sources */,
 				A2E2E999215D1414001926C3 /* OrderingModel.swift in Sources */,
+				A2468B3C2163980C00A22881 /* NotificationHandler.swift in Sources */,
 				BEDDF6A2215D112D00003770 /* ViewController.swift in Sources */,
 				BEDDF6A0215D112D00003770 /* AppDelegate.swift in Sources */,
 			);
