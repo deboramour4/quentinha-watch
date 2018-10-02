@@ -30,7 +30,9 @@ class PaymentInterfaceController: WKInterfaceController {
         
         if WCSession.isSupported() {
             WCSession.default.delegate = self
-            WCSession.default.activate()
+            if !(WCSession.default.activationState == WCSessionActivationState.activated) {
+                WCSession.default.activate()
+            }
         }
     }
 
