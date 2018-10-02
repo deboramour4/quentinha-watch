@@ -41,11 +41,18 @@ class ViewController: UIViewController {
 extension ViewController: WCSessionDelegate {
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        let order = Order.transformToObject(order: message)
-        self.myOrders.append(order)
-        self.model.makeOrderWithTimer()
-        DispatchQueue.main.async {
-            self.ordersTableView.reloadData()
+        if let action = message["action"] as? String {
+            if action == "cancel" {
+                self.model.cancelOrder()
+            }
+        }
+        else {
+            let order = Order.transformToObject(order: message)
+            self.myOrders.append(order)
+            self.model.makeOrderWithTimer()
+            DispatchQueue.main.async {
+                self.ordersTableView.reloadData()
+            }
         }
     }
     

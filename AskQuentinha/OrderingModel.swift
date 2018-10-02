@@ -61,6 +61,11 @@ class OrderingModel: NSObject {
 		self.timer?.cancel()
 		self.timer = nil
 	}
+    
+    func cancelOrder() {
+        self.stopTimer()
+        self.currentStatus = .noOrder
+    }
 
 	/// Adds a notification to remind the user to place the order at the specified time.
 	func configureCalendarReminder() {
