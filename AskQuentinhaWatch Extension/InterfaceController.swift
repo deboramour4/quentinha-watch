@@ -25,17 +25,18 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
-        if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            WCSession.default.activate()
-        }
-        
         toggleMenuButton(noOrder: true)
     }
     
     override func willActivate() {
         super.willActivate()
-        
+
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            if !(WCSession.default.activationState == WCSessionActivationState.activated) {
+                WCSession.default.activate()
+            }
+        }
     }
     
     override func didDeactivate() {
@@ -68,10 +69,12 @@ class InterfaceController: WKInterfaceController {
     func toggleMenuButton(noOrder: Bool) {
         if noOrder {
             orderInProgress = false
+            newOrderButton.setTitle("Pedir")
             self.clearAllMenuItems()
             self.addMenuItem(with: .add, title: "Novo Pedido", action: #selector(InterfaceController.newOrderAction))
         } else {
             orderInProgress = true
+            newOrderButton.setTitle("Cancelar")
             self.clearAllMenuItems()
             self.addMenuItem(with: .decline , title: "Cancelar Pedido", action: #selector(InterfaceController.cancelOrderAction))
         }
@@ -87,7 +90,6 @@ extension InterfaceController: WCSessionDelegate {
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let _ = message["noOrder"] as? String {
-            newOrderButton.setTitle("Pedir")
             DispatchQueue.main.async {
                 self.toggleMenuButton(noOrder: true)
             }
@@ -104,7 +106,6 @@ extension InterfaceController: WCSessionDelegate {
                                                          repeatCount: 1)
                 contTimer = contTimer+20
 
-            newOrderButton.setTitle("Cancelar")
             DispatchQueue.main.async {
                 self.toggleMenuButton(noOrder: false)
             }
