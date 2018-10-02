@@ -43,6 +43,13 @@ class InterfaceController: WKInterfaceController {
                                                  duration: 60,
                                                  repeatCount: 1)
     }
+    @IBAction func newOrderAction() {
+        //presentController(withName: "MealInterfaceController", context: nil)
+
+        //pushController(withName: "MealInterfaceController", context: nil)
+
+        presentController(withNames: ["MealInterfaceController", "PaymentInterfaceController"], contexts: nil)
+    }
 
 }
 

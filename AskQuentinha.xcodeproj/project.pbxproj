@@ -501,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VA7DWMQ39T;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
 				INFOPLIST_FILE = AskQuentinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -521,7 +521,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VA7DWMQ39T;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
 				INFOPLIST_FILE = AskQuentinha/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,7 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VA7DWMQ39T;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
 				INFOPLIST_FILE = "AskQuentinhaWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -562,7 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VA7DWMQ39T;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
 				INFOPLIST_FILE = "AskQuentinhaWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -585,7 +585,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VA7DWMQ39T;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
 				IBSC_MODULE = AskQuentinhaWatch_Extension;
 				INFOPLIST_FILE = AskQuentinhaWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp;
@@ -604,7 +604,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VA7DWMQ39T;
+				DEVELOPMENT_TEAM = 4YUW7D4357;
 				IBSC_MODULE = AskQuentinhaWatch_Extension;
 				INFOPLIST_FILE = AskQuentinhaWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.paulocardosob.AskQuentinha.watchkitapp;

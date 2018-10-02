@@ -12,8 +12,8 @@ import WatchConnectivity
 
 class PaymentInterfaceController: WKInterfaceController {
 
-    @IBOutlet var cashButton: WKInterfaceButton!
-    @IBOutlet var creditCardButton: WKInterfaceButton!
+    @IBOutlet var cashButton: WKInterfaceGroup!
+    @IBOutlet var creditCardButton: WKInterfaceGroup!
 
     var payWithCash : Bool? = false
 
@@ -54,12 +54,12 @@ class PaymentInterfaceController: WKInterfaceController {
                 cashButton.setBackgroundColor(UIColor.defaultGray)
             } else {
                 payWithCash = true
-                cashButton.setBackgroundColor(UIColor.gray)
+                cashButton.setBackgroundColor(UIColor.darkGray)
                 creditCardButton.setBackgroundColor(UIColor.defaultGray)
             }
         } else {
             payWithCash = true
-            cashButton.setBackgroundColor(UIColor.gray)
+            cashButton.setBackgroundColor(UIColor.darkGray)
         }
     }
 
@@ -70,12 +70,12 @@ class PaymentInterfaceController: WKInterfaceController {
                 creditCardButton.setBackgroundColor(UIColor.defaultGray)
             } else {
                 payWithCash = false
-                creditCardButton.setBackgroundColor(UIColor.gray)
+                creditCardButton.setBackgroundColor(UIColor.darkGray)
                 cashButton.setBackgroundColor(UIColor.defaultGray)
             }
         } else {
             payWithCash = false
-            creditCardButton.setBackgroundColor(UIColor.gray)
+            creditCardButton.setBackgroundColor(UIColor.darkGray)
         }
     }
 
