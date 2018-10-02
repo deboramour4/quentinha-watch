@@ -15,7 +15,7 @@ class PaymentInterfaceController: WKInterfaceController {
     @IBOutlet var cashButton: WKInterfaceGroup!
     @IBOutlet var creditCardButton: WKInterfaceGroup!
 
-    var payWithCash : Bool? = false {
+    var payWithCash : Bool? = nil {
         didSet {
             if let withCash = payWithCash {
                 Order.current.paymentType = withCash ? "Dinheiro" : "Cartão"
