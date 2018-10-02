@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 		
 		self.model.delegate = self
+		self.model.configureCalendarReminder()
 		
         self.ordersTableView.dataSource = self
         if WCSession.isSupported() {
@@ -27,9 +28,9 @@ class ViewController: UIViewController {
         }
     }
 
-	@IBAction func startPreparing(_ sender: Any) {
-		self.model.makeOrderWithTimer()
-	}
+	// @IBAction func startPreparing(_ sender: Any) {
+	// 	 self.model.makeOrderWithTimer()
+	// }
 	
 	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

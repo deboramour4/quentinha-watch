@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R1L-LT-Bfb">
-                                <rect key="frame" x="0.0" y="85.5" width="375" height="515.5"/>
+                                <rect key="frame" x="0.0" y="85.5" width="375" height="581.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderCell" textLabel="VLg-bV-WHk" detailTextLabel="Duc-f1-DXc" style="IBUITableViewCellStyleValue1" id="ZaZ-Ui-P7j">
@@ -54,20 +54,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahe-pO-f88">
-                                <rect key="frame" x="138" y="617" width="99" height="30"/>
-                                <state key="normal" title="Iniciar preparo"/>
-                                <connections>
-                                    <action selector="startPreparing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xzr-er-Fni"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ahe-pO-f88" firstAttribute="top" secondItem="R1L-LT-Bfb" secondAttribute="bottom" constant="16" id="16T-mU-8b5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ahe-pO-f88" secondAttribute="bottom" constant="20" id="Im0-Gm-U95"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="R1L-LT-Bfb" secondAttribute="bottom" id="23z-zc-Jgj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rVn-VP-O7N" secondAttribute="trailing" constant="16" id="POi-mz-7xK"/>
-                            <constraint firstItem="ahe-pO-f88" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="V1K-SA-ueh"/>
                             <constraint firstItem="R1L-LT-Bfb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vln-dz-jeB"/>
                             <constraint firstItem="rVn-VP-O7N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="ckd-av-BAe"/>
                             <constraint firstItem="R1L-LT-Bfb" firstAttribute="top" secondItem="rVn-VP-O7N" secondAttribute="bottom" constant="16" id="myt-2m-StN"/>

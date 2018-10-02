@@ -80,7 +80,10 @@ extension InterfaceController: WCSessionDelegate {
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let _ = message["noOrder"] as? String {
-            toggleMenuButton(noOrder: true)
+            DispatchQueue.main.async {
+                self.toggleMenuButton(noOrder: true)
+            }
+
             contTimer = 0
 
         } else {
@@ -92,8 +95,9 @@ extension InterfaceController: WCSessionDelegate {
                                                          duration: 1,
                                                          repeatCount: 1)
                 contTimer = contTimer+20
-
-            toggleMenuButton(noOrder: false)
+            DispatchQueue.main.async {
+                self.toggleMenuButton(noOrder: false)
+            }
         }
     }
     
