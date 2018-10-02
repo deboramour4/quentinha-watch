@@ -35,7 +35,8 @@ class OrderingModel: NSObject {
 			let statusInfo = self.currentStatus.info
 			
 			if self.currentStatus == .noOrder {
-				self.stopTimer()
+                self.delegate?.send(message: ["noOrder": "true"])
+                self.stopTimer()
 			} else {
 				self.createLocalNotification(
 					title: statusInfo.title,
