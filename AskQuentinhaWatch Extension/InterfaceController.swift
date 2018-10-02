@@ -25,16 +25,17 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
+        if WCSession.isSupported() {
+            WCSession.default.delegate = self
+            WCSession.default.activate()
+        }
+        
         toggleMenuButton(noOrder: true)
     }
     
     override func willActivate() {
         super.willActivate()
         
-        if WCSession.isSupported() {
-            WCSession.default.delegate = self
-            WCSession.default.activate()
-        }
     }
     
     override func didDeactivate() {
