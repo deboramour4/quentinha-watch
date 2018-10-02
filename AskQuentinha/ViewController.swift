@@ -27,9 +27,9 @@ class ViewController: UIViewController {
         }
     }
 
-	@IBAction func startPreparing(_ sender: Any) {
-		self.model.makeOrderWithTimer()
-	}
+	// @IBAction func startPreparing(_ sender: Any) {
+	// 	 self.model.makeOrderWithTimer()
+	// }
 	
 	override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
