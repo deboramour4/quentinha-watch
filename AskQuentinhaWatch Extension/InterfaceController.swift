@@ -13,7 +13,7 @@ import WatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     
-    var isAnimating = false
+    var orderInProgress = false
 
     @IBOutlet var titleLabel: WKInterfaceLabel!
     @IBOutlet var emojiLabel: WKInterfaceLabel!
@@ -44,6 +44,14 @@ class InterfaceController: WKInterfaceController {
     override func didAppear() {
     }
 
+    @IBAction func newOrderButtonAction() {
+        if orderInProgress {
+            cancelOrderAction()
+        } else {
+            newOrderAction()
+        }
+    }
+
     @objc func newOrderAction() {
         presentController(withNames: ["MealInterfaceController", "PaymentInterfaceController"], contexts: nil)
     }
@@ -58,15 +66,13 @@ class InterfaceController: WKInterfaceController {
       When an order is being made, menu shows "Cancelar Pedido"*/
     func toggleMenuButton(noOrder: Bool) {
         if noOrder {
+            orderInProgress = false
             self.clearAllMenuItems()
             self.addMenuItem(with: .add, title: "Novo Pedido", action: #selector(InterfaceController.newOrderAction))
-
-            newOrderButton.setTitle("Pedir")
         } else {
+            orderInProgress = true
             self.clearAllMenuItems()
             self.addMenuItem(with: .decline , title: "Cancelar Pedido", action: #selector(InterfaceController.cancelOrderAction))
-
-            newOrderButton.setTitle("Cancelar")
         }
     }
 
@@ -80,6 +86,7 @@ extension InterfaceController: WCSessionDelegate {
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         if let _ = message["noOrder"] as? String {
+            newOrderButton.setTitle("Pedir")
             DispatchQueue.main.async {
                 self.toggleMenuButton(noOrder: true)
             }
@@ -95,6 +102,8 @@ extension InterfaceController: WCSessionDelegate {
                                                          duration: 1,
                                                          repeatCount: 1)
                 contTimer = contTimer+20
+
+            newOrderButton.setTitle("Cancelar")
             DispatchQueue.main.async {
                 self.toggleMenuButton(noOrder: false)
             }

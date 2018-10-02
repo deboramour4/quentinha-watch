@@ -38,9 +38,9 @@ enum OrderStatus {
 		case .processed:
 			return ("Pedido processado", "Aguardando confirmação do restaurante", "ProcessedNotification", "😉")
 		case .confirmed:
-			return ("Pedido confirmado pelo restaurante", "Iniciaremos logo o preparo", "ConfirmedNotification", "✅")
+			return ("Pedido confirmado", "Iniciaremos logo o preparo", "ConfirmedNotification", "✅")
 		case .preparing:
-			return ("Iniciado o preparo do pedido", "Previsão de pronto daqui a 2 mins", "PreparingNotification", "👨‍🍳")
+			return ("Iniciado o preparo", "Previsão de pronto daqui a 2 mins", "PreparingNotification", "👨‍🍳")
 		case .outForDelivery:
 			return ("Saiu para entrega", "Previsão de chegada daqui a 1 min", "OutForDeliveryNotification", "🚗")
 		case .ready:

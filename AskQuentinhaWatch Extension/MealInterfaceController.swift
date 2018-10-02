@@ -16,7 +16,7 @@ class MealInterfaceController: WKInterfaceController {
     @IBOutlet var garnishTable: WKInterfaceTable!
     @IBOutlet var mainMealTable: WKInterfaceTable!
     
-    var garnishs = [("Arroz",false) , ("Baião",false),("Farofa",false) , ("Salada",false) ]
+    var garnishs = [("Arroz",false) , ("Baião",false) ]
     var mainMeals = [("Frango", false), ("Carne", false), ("Soja",false)]
 
     var garnishSelected : String? {

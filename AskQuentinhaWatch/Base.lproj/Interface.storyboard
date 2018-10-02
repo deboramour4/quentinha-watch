@@ -14,16 +14,16 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="AskQuentinhaWatch" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" spacing="8" id="gvo-D3-ooT">
+                        <group width="1" alignment="left" layout="vertical" spacing="0.0" id="gvo-D3-ooT">
                             <items>
-                                <group width="120" height="120" alignment="center" backgroundImage="Progress0" id="725-lv-CZg">
+                                <group width="100" height="100" alignment="center" backgroundImage="Progress0" id="725-lv-CZg">
                                     <items>
                                         <label alignment="center" verticalAlignment="center" text="😃" id="H0g-xH-Fq4">
-                                            <fontDescription key="font" type="system" pointSize="42"/>
+                                            <fontDescription key="font" type="system" pointSize="36"/>
                                         </label>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" layout="vertical" spacing="28" id="7EV-Rh-3WK">
+                                <group width="1" alignment="left" layout="vertical" id="7EV-Rh-3WK">
                                     <items>
                                         <label alignment="center" verticalAlignment="bottom" text="Faça seu pedido" id="B2c-Nr-wbA">
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,7 +32,7 @@
                                             <color key="titleColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="backgroundColor" red="0.98039215686274506" green="0.066666666666666666" blue="0.30980392156862746" alpha="0.17000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
-                                                <segue destination="hYm-E6-s3d" kind="modal" identifier="chooseMeal" id="BM2-SF-Gaz"/>
+                                                <action selector="newOrderButtonAction" destination="AgC-eL-Hgc" id="29Y-A5-1AH"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -44,12 +44,12 @@
                     <connections>
                         <outlet property="backgroundGroup" destination="725-lv-CZg" id="MO4-nD-xOB"/>
                         <outlet property="emojiLabel" destination="H0g-xH-Fq4" id="IXa-tH-UMp"/>
-                        <outlet property="newOrderButton" destination="mKQ-bu-o4P" id="7jJ-rp-dI2"/>
+                        <outlet property="newOrderButton" destination="mKQ-bu-o4P" id="eOy-2s-Lpb"/>
                         <outlet property="titleLabel" destination="B2c-Nr-wbA" id="Enm-Lx-aSH"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="366"/>
+            <point key="canvasLocation" x="249" y="345"/>
         </scene>
         <!--MealInterfaceController-->
         <scene sceneID="49a-VV-gvQ">
