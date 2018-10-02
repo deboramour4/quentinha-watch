@@ -18,15 +18,17 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var titleLabel: WKInterfaceLabel!
     @IBOutlet var emojiLabel: WKInterfaceLabel!
     @IBOutlet var backgroundGroup: WKInterfaceGroup!
-    
+    @IBOutlet var newOrderButton: WKInterfaceButton!
+
+    var contTimer = 0
+
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        // Configure interface objects here.
+
+        toggleMenuButton(noOrder: true)
     }
     
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
         if WCSession.isSupported() {
@@ -36,19 +38,36 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
     
     override func didAppear() {
-        
     }
-    @IBAction func newOrderAction() {
-        //presentController(withName: "MealInterfaceController", context: nil)
 
-        //pushController(withName: "MealInterfaceController", context: nil)
-
+    @objc func newOrderAction() {
         presentController(withNames: ["MealInterfaceController", "PaymentInterfaceController"], contexts: nil)
+    }
+
+    @objc func cancelOrderAction() {
+       // presentController(withNames: ["MealInterfaceController", "PaymentInterfaceController"], contexts: nil)
+        print("order cancel")
+    }
+
+    /*It Changes the content and function of the menu button
+      When it has no orders, menu shows "Novo Pedido"
+      When an order is being made, menu shows "Cancelar Pedido"*/
+    func toggleMenuButton(noOrder: Bool) {
+        if noOrder {
+            self.clearAllMenuItems()
+            self.addMenuItem(with: .add, title: "Novo Pedido", action: #selector(InterfaceController.newOrderAction))
+
+            newOrderButton.setTitle("Pedir")
+        } else {
+            self.clearAllMenuItems()
+            self.addMenuItem(with: .decline , title: "Cancelar Pedido", action: #selector(InterfaceController.cancelOrderAction))
+
+            newOrderButton.setTitle("Cancelar")
+        }
     }
 
 }
@@ -60,15 +79,25 @@ extension InterfaceController: WCSessionDelegate {
     }
 
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        titleLabel.setText(message["title"] as? String)
-        emojiLabel.setText(message["emoji"] as? String)
-        
-        if !isAnimating {
+        if let _ = message["noOrder"] as? String {
+            DispatchQueue.main.async {
+                self.toggleMenuButton(noOrder: true)
+            }
+
+            contTimer = 0
+
+        } else {
+            titleLabel.setText(message["title"] as? String)
+            emojiLabel.setText(message["emoji"] as? String)
+
             backgroundGroup.setBackgroundImageNamed("Progress")
-            backgroundGroup.startAnimatingWithImages(in: NSRange(location: 0, length: 99),
-                                                     duration: 10,
-                                                     repeatCount: 1)
-            isAnimating = true
+            backgroundGroup.startAnimatingWithImages(in: NSRange(location: contTimer, length: 19),
+                                                         duration: 1,
+                                                         repeatCount: 1)
+                contTimer = contTimer+20
+            DispatchQueue.main.async {
+                self.toggleMenuButton(noOrder: false)
+            }
         }
     }
     

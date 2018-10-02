@@ -40,18 +40,11 @@
                             </items>
                         </group>
                     </items>
-                    <menu key="menu" id="6oU-8J-HNt">
-                        <items>
-                            <menuItem title="Novo Pedido" icon="add" id="9Fd-az-H0R">
-                                <connections>
-                                    <action selector="newOrderAction" destination="AgC-eL-Hgc" id="TGc-lo-kbI"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
+                    <menu key="menu" id="6oU-8J-HNt"/>
                     <connections>
                         <outlet property="backgroundGroup" destination="725-lv-CZg" id="MO4-nD-xOB"/>
                         <outlet property="emojiLabel" destination="H0g-xH-Fq4" id="IXa-tH-UMp"/>
+                        <outlet property="newOrderButton" destination="mKQ-bu-o4P" id="7jJ-rp-dI2"/>
                         <outlet property="titleLabel" destination="B2c-Nr-wbA" id="Enm-Lx-aSH"/>
                     </connections>
                 </controller>

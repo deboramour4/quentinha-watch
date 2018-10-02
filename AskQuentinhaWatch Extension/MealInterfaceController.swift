@@ -12,6 +12,7 @@ import Foundation
 
 class MealInterfaceController: WKInterfaceController {
 
+    //Outlets of 
     @IBOutlet var garnishTable: WKInterfaceTable!
     @IBOutlet var mainMealTable: WKInterfaceTable!
     
